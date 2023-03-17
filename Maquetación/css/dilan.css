@@ -1,5 +1,52 @@
-.test2 {
-    background-color: var(--rojo-test);
-    width: 100px;
-    height: 100px;
+.tarjeta {
+    margin: 20px;
+    width: 385px;
+    height: 495px;
+    background: var(--morado-1);
+    border-radius: 8px;
+    padding: 32px;
+}
+
+.tarjeta__image {
+    margin: 0 auto;
+    width: 95%;
+    height: 313px;
+    background: var(--morado-2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tarjeta__image img{
+    width: 100%;
+}
+
+.tarjeta__detalles {
+    margin: 0 auto;
+    width: 95%;
+}
+
+.tarjeta__detalles span {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarjeta__nombre {
+    color: var(--blanco-1);
+}
+
+.tarjeta__fecha {
+    color: var(--blanco-1);
+    margin-top: 20px;
+}
+
+.boton {
+    background: var(--morado-3);
+    height: 52px;
+    padding: 0 30px;
+}
+
+.etiquetaCAT {
+    background: var(--morado-2);
+    padding: 5px 10px;
+    border-radius: 8px;
 }

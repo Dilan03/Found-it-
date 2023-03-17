@@ -1,5 +1,6 @@
 :root {
-    --rojo-test: rgb(181, 144, 144);
-    --azul-test: blue;
-    --amarillo-test: rgb(170, 170, 96);
+    --morado-1: #181B35;
+    --morado-2: #242641;
+    --morado-3: #8F7DFA;
+    --blanco-1: #FFFFFF;
 }
