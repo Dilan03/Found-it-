@@ -1,6 +1,37 @@
+@font-face {
+    font-family: RobotoMono-Bold;
+    src: url(../assets/fonts/RobotoMono-Bold.ttf);
+}
+
+@font-face {
+    font-family: RobotoMono-Light;
+    src: url(../assets/fonts/RobotoMono-Light.ttf);
+}
+
+@font-face {
+    font-family: RobotoMono-Medium;
+    src: url(../assets/fonts/RobotoMono-Medium.ttf);
+}
+
+@font-face {
+    font-family: RobotoMono-Regular;
+    src: url(../assets/fonts/RobotoMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: RobotoMono-Thin;
+    src: url(../assets/fonts/RobotoMono-Thin.ttf);
+}
 :root {
     --morado-1: #181B35;
     --morado-2: #242641;
     --morado-3: #8F7DFA;
     --blanco-1: #FFFFFF;
+
+    --border-8: 8px;
+
+    --lost-blue:rgba(0, 119, 255, 0.64);
+    --ancient-purple: rgba(104, 78, 255, 0.64);
+    --found-pink: rgba(219, 0, 255, 0.64);
+    --gathered-aqua:rgba(0, 240, 255, 0.64);
 }

@@ -1,16 +1,19 @@
+/* Clases de tarjeta */
 .tarjeta {
+    position: relative;
     margin: 20px;
     width: 385px;
     height: 495px;
     background: var(--morado-1);
     border-radius: 8px;
     padding: 32px;
+    padding-top: 36px;
 }
 
 .tarjeta__image {
     margin: 0 auto;
     width: 95%;
-    height: 313px;
+    height: 65%;
     background: var(--morado-2);
     border-radius: 8px;
     overflow: hidden;
@@ -23,6 +26,7 @@
 .tarjeta__detalles {
     margin: 0 auto;
     width: 95%;
+    height: 30%;
 }
 
 .tarjeta__detalles span {
@@ -32,21 +36,82 @@
 
 .tarjeta__nombre {
     color: var(--blanco-1);
+    font-family: RobotoMono-Light;
+    font-size: 32px;
+    margin: 10px 0;
 }
 
 .tarjeta__fecha {
     color: var(--blanco-1);
-    margin-top: 20px;
+    margin-top: 15px;
+    font-family: RobotoMono-Light;
+    font-size: 24px;
 }
 
 .boton {
     background: var(--morado-3);
+    border-radius: var(--border-8);
+}
+
+.boton__tarjeta {
     height: 52px;
+    color: var(--blanco-1);
     padding: 0 30px;
+    font-family: RobotoMono-Light;
+    font-size: 18px;
 }
 
 .etiquetaCAT {
     background: var(--morado-2);
+    color: var(--blanco-1);
     padding: 5px 10px;
     border-radius: 8px;
+    font-family: RobotoMono-Regular;
+    font-size: 16px;
 }
+
+.etiquetaEST {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 48px;
+    width: 120px;
+    border-radius: var(--border-8);
+    margin-left: 8px;
+}
+
+.etiquetaEST span {
+    color: var(--blanco-1);
+    font-family: RobotoMono-Regular;
+    font-size: 16px;
+}
+
+.etiquetaEST--lost {
+    background: var(--lost-blue);
+}
+
+.etiquetaEST--ancient {
+    background: var(--ancient-purple);
+}
+
+.etiquetaEST--found {
+    background: var(--found-pink);
+    display: none;
+}
+
+.etiquetaEST--gathered {
+    background: var(--gathered-aqua);
+}
+
+.tarjeta__etiquetas {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    top: 20px;
+    width: 82%;
+    left: 9%;
+    height: 48px;
+}
+
+/* Fin clases tarjeta */
