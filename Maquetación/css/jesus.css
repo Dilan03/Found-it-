@@ -3,3 +3,21 @@
     width: 100px;
     height: 100px;
 }
+
+/*.Elec input:checked{
+    background-color: cyan;
+}*/
+
+.cuerpo{
+    display: grid;
+    grid-template-areas: 
+    "Clasificación   Ubicación";
+}
+
+.Clasificación{
+    grid-area: Clasificación;
+}
+
+.Ubicación{
+    grid-area: Ubicación;
+}
