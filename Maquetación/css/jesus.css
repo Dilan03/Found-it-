@@ -10,13 +10,15 @@
 
 *{
     font-family: RobotoMono-Regular;
+    color: white;
 }
 .cuerpo{
     display: grid;
-    background-color: violet;
+    background: #313450;
     border-radius: var(--border-8);
     grid-template-areas: 
     "Clasificación  Ubicación_1  Ubicación_2  Ubicación_3  Ubicación_4 ";
+    min-height: 160px;
 }
 
 .Clasificación{
