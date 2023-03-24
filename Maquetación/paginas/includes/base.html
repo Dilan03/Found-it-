@@ -10,13 +10,30 @@
     <link rel="stylesheet" href="../../css/jesus.css">
     <link rel="stylesheet" href="../../css/variables.css">
     <link rel="stylesheet" href="../../css/normalize.css">
-
+    <style>
+        .options__tuerca {
+            padding-bottom: 6px;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
     <div class="container">
+
+        
         <header class="header">
-            
+            <i class="logo"><img src="../../assets/icons/logo.svg" alt="logo"></i>
+            <div class="search__container">
+                <form class="search__form">
+                    <button class="button__search" type="submit"> <i> <img src="../../assets/icons/search.svg"> </i> </button>
+                    <input type="text" placeholder="Buscar...">
+                </form>
+            </div>
+            <div class="header__options">
+                <i><img class="options__upload" src="../../assets/icons/upload.svg"></i>
+                <i><img class="options__tuerca" src="../../assets/icons/tuerca.svg"></i>
+                <i><img class="options__user" src="../../assets/icons/user-box.svg" ></i>
+            </div>
         </header>
 
         <nav class="menu">
@@ -102,6 +119,7 @@
             </div>
         </section>
     </div>
+
     <footer class="footer">
         <i class="icon"></i>
     </footer>
