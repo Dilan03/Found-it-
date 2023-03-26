@@ -20,7 +20,7 @@ h2 {
   margin-bottom: 15px;
 }
 
-input[type="text"],
+/* input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="password"],
@@ -35,7 +35,7 @@ select {
     box-sizing: border-box;
     border: solid #5b5881;
     color: white;
-}
+} */
 
 .password-group {
     position: relative;
