@@ -1,8 +1,8 @@
 .registration-form {
     max-width: 1000px;
     margin: 0 auto;
-    width: 400px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
     padding: 30px;
     background-color: #414268;
     border-radius: 10px;
@@ -20,13 +20,13 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="password"],
-select {
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form input[type="password"],
+.registration-form select[type="major"] {
     display: block;
-    width: 70%;
+    width: 80%;
     padding: 5px;
     margin: 0 auto;
     border: none;
@@ -35,7 +35,8 @@ select {
     box-sizing: border-box;
     border: solid #5b5881;
     color: white;
-} */
+    margin-top: 20px;
+  }
 
 .password-group {
     position: relative;
@@ -77,11 +78,11 @@ button.submit-button:hover {
 }
 
 /*Fin css registro*/
-.registration-form {
+.login-form {
     max-width: 1000px;
     margin: 0 auto;
     width: 500px;
-    height: 500px;
+    height: 350px;
     padding: 30px;
     background-color: #414268;
     border-radius: 10px;
@@ -99,10 +100,10 @@ button.submit-button:hover {
     margin-bottom: 15px;
   }
   
-  input[type="email"],
-  input[type="password"],
-  input[type="text"],
-  select[type="major"] {
+  .login-form input[type="email"],
+  .login-form input[type="password"],
+  .login-form input[type="text"],
+  .login-form select[type="major"] {
     display: block;
     width: 80%;
     padding: 5px;
