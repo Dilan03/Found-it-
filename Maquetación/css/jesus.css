@@ -19,6 +19,8 @@
     grid-template-areas: 
     "Clasificación  Ubicación_1  Ubicación_2  Ubicación_3  Ubicación_4  Ubicación_5  Ubicación_6  Ubicación_7";
     min-height: 160px;
+    margin-top: 19px;
+    /* display: none; */
 }
 
 /*.cuerpo_u{
