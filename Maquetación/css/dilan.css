@@ -109,7 +109,7 @@
     display: flex;
     justify-content: flex-end;
     top: 20px;
-    width: 82%;
+    width: 83%;
     left: 9%;
     height: 48px;
 }
@@ -256,3 +256,26 @@ footer {
     content: url(../assets/icons/found-active.svg);
 }
 
+@media screen and (max-width: 1400px) {
+    .container {
+        width: 1200px;
+    }
+
+    .tarjeta {
+        padding: 20px;
+        padding-top: 34px;
+    }
+
+    .boton__tarjeta {
+        padding: 0 10px;
+    }
+
+    .button__search {
+        left: 514px;
+
+    }
+
+    .menu {
+        margin-top: 50px;
+    }
+}
