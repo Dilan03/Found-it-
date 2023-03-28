@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+}
+
 /* Clases de tarjeta */
 .tarjeta {
     position: relative;
@@ -57,6 +61,9 @@
     height: 44px;
     color: var(--blanco-1);
     padding: 0 20px;
+}
+
+.boton__tarjeta a {
     font-family: RobotoMono-Light;
     font-size: 18px;
 }
@@ -141,6 +148,20 @@ body {
     grid-column-start: 1;
     grid-column-end: 5;
     height: 100%;
+}
+
+.options__logeduser {
+    display: none;
+}
+
+.boton__tarjeta--login {
+    background: var(--morado-bg);
+    border: 2px solid var(--morado-8);
+}
+
+.boton__tarjeta--login:hover {
+    border: 2px solid var(--morado-3);
+    font-family: RobotoMono-Regular;
 }
 
 .logo {
@@ -320,6 +341,29 @@ footer {
 .slider-wh {
     width: 370px;
     margin-right: 19px;
+}
+
+/*lost objects*/
+
+.gallery__top {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.gallery__titulo {
+    font-family: RobotoMono-Regular;
+    font-size: 32px;
+}
+
+.boton__filtro img{
+    position: relative;
+    margin-right: 10px;
+    top: 3px;
+}
+
+.boton__filtro span {
+    font-family: RobotoMono-Regular;
+    font-size: 25px; 
 }
 
 /*Media queries*/
