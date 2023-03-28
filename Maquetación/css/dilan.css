@@ -97,7 +97,7 @@
 
 .etiquetaEST--found {
     background: var(--found-pink);
-    display: none;
+    /* display: none; */
 }
 
 .etiquetaEST--gathered {
@@ -132,7 +132,6 @@ body {
     display: grid;
     grid-template-columns: 145px 1fr;
     grid-template-rows: 180px 1fr;
-    /* background: aquamarine; */
 }
 
 .header {
@@ -209,20 +208,18 @@ body {
     justify-content: space-between;
     height: 305px;
     margin-top: 84px;
-    /* background: green; */
 }
 
 .main {
+    overflow: hidden;
     grid-column-start: 2;
     grid-column-end: 5;
-    /* background:orange; */
 }
 
 .main__gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 19px 19px;
-    padding-bottom: 60px;
 }
 
 footer {
@@ -256,6 +253,76 @@ footer {
     content: url(../assets/icons/found-active.svg);
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.footer__contenido {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.footer__contenido span a {
+    margin-left: 50px;
+    line-height: 50px;
+}
+
+/*Hero*/
+
+.hero {
+    position: relative;
+    min-height: 86vh;
+}
+
+.hero__titulo {
+    margin-top: 0;
+    width: 75%;
+    font-family: RobotoMono-Bold;
+    font-size: 90px;
+}
+
+.hero__imagen {
+    position: absolute;
+    right: 0;
+    top: 25%;
+}
+
+.boton__hero {
+    height: 85px;
+    color: black;
+    padding: 0 22px;
+    font-family: RobotoMono-Medium;
+    font-size: 20px;
+}
+
+/*Reciente Gallery*/
+
+.RecienteGallery__titulo {
+    font-family: RobotoMono-Regular;
+    font-size: 36px;
+}
+
+.tarjetaSlider {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 135%;
+    height: 558px;
+    margin-bottom: 60px;
+    /* margin-left: -190px; */ /*Se va usar para despalzar tarjetas*/
+}
+
+.slider-wh {
+    width: 370px;
+    margin-right: 19px;
+}
+
+/*Media queries*/
 @media screen and (max-width: 1400px) {
     .container {
         width: 1200px;
@@ -277,5 +344,13 @@ footer {
 
     .menu {
         margin-top: 50px;
+    }
+
+    .hero__titulo {
+        font-size: 75px;
+    }
+    
+    .hero__imagen {
+        width: 480px;
     }
 }
