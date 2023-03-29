@@ -171,6 +171,177 @@ button.submit-button:hover {
   .field-container {
     margin-top: 60px;
   }
-  
-  xd
+ 
+  /*Fin css entrar*/
+.rectangulo1{
+    display: block;
+    position: absolute;
+    width: 872px;
+    height: 777px;
+    left: 310px;
+    top: 70px;
+    background: #181B35;
+    border-radius: 8px;
+}
+.rectangulo2{
+    display: block;
+    position: relative;
+    width: 746px;
+    height: 646px;
+    left: 66px;
+    top: 70px;
+    background: #242641;
+    border-radius: 8px;
+}
+.titulo{
+    display: block;
+    position: absolute;
+    top: 30px;
+    color: white;
+    left: 50px;
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 41px;
+}
+.rectangulo3{
+  display: block;
+  position: absolute;
+  width: 428px;
+  height: 777px;
+  left: 1200px;
+  top: 70px;
+  background: #181B35;
+  border-radius: 8px;
+}
+.diaencontrado{
+    display: block;
+    position: absolute;
+    width: 304px;
+    height: 82px;
+    left: 50px;
+    top: 115px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 21px;
+}
+.desc{
+    display: block;
+    position: absolute;
+    top: 177px;
+    left: 50px;
+    color: white;
+    font-size: 16px;
+    line-height: 21px;
+}
+.desc2{
+    display: block;
+    position: absolute;
+    top: 204px;
+    left: 50px;
+    text-align: justify;
+    width: 295px;
+    color: white;
+    font-size: 12.5px;
+    line-height: 17px;
+}
+.cat{
+    display: block;
+    position: absolute;
+    top: 310px;
+    left: 50px;
+    color: white;
+}
+.cate{
+    display: block;
+    position: absolute;
+    top: 345px;
+    color: white;
+    width: 105px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    left: 50px;
+    background: #242641;
+    border-radius: 8px;
+    font-size: 12px;
+}
+.ub{
+  display: block;
+  position: absolute;
+  top: 420px;
+  width: 150px;
+  left: 50px;
+  color: white;
+}
+.edificio{
+    display: block;
+    position: absolute;
+    top: 450px;
+    left: 50px;
+    color: white;
+    width: 105px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    left: 50px;
+    background: #242641;
+    border-radius: 8px;
+    font-size: 12px;
+}
+.encontro{
+    display: block;
+    position: absolute;
+    top: 525px;
+    left: 50px;
+    color: white;
+    font-size: 16px;
+    line-height: 21px;
+    
+}
+.alumno{
+    display: block;
+    position: absolute;
+    top: 540px;
+    left: 50px;
+    font-size: 19px;
+    line-height: 25px;
+    color: white;
+}
+.carrera{
+    display: block;
+    position: absolute;
+    top: 570px;
+    left: 50px;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(255, 255, 255, 0.74);
+}
+.tel{
+    display: block;
+    position: absolute;
+    top: 595px;
+    left: 50px;
+    font-size: 16px;
+    line-height: 21px;
+    color: white;
+    color: rgba(255, 255, 255, 0.74);
+}
+.pre{
+    display: block;
+    position: absolute;
+    top: 630px;
+    left: 40%;
+    color: #8F7DFA;
+}
+.rectangulo4{
+  display: block;
+  position: absolute;
+  width: 293px;
+  height: 77px;
+  left: 17%;
+  top: 680px;
+  color: white;
+  background: #8F7DFA;
+  border-radius: 8px;
+}
 
