@@ -336,12 +336,22 @@ button.submit-button:hover {
 .rectangulo4{
   display: block;
   position: absolute;
-  width: 293px;
+  width: 300px;
   height: 77px;
   left: 17%;
   top: 680px;
   color: white;
   background: #8F7DFA;
   border-radius: 8px;
+  font-size: 24px;
+  line-height: 77px;
+}
+.was{
+  display: block;
+  position: absolute;
+  left: 16.67%;
+  right: 16.71%;
+  top: 50%;
+  bottom: 16.67%;
 }
 
