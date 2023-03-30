@@ -5,7 +5,7 @@
     height: 500px;
     padding: 30px;
     background-color: #414268;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .register-titulo {
@@ -31,12 +31,12 @@
     margin: 0 auto;
     border: none;
     background-color: #242541;
-    border-radius: 10px;
+    border-radius: 8px;
     box-sizing: border-box;
     border: solid #5b5881;
     color: white;
     margin-top: 20px;
-  }
+}
 
 .password-group {
     position: relative;
@@ -65,7 +65,7 @@ button.submit-button {
     width: 30%;
     padding: 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: #917cfa;
     color: white;
     font-size: 16px;
@@ -82,10 +82,10 @@ button.submit-button:hover {
     max-width: 1000px;
     margin: 0 auto;
     width: 500px;
-    height: 350px;
+    height: 370px;
     padding: 30px;
     background-color: #414268;
-    border-radius: 10px;
+    border-radius: 8px;
   }
   
   .login-titulo {
@@ -93,7 +93,7 @@ button.submit-button:hover {
     font-size: 32px;
     color: #fff;
     margin-top: 10px;
-    font-family: RobotoMono-Light;
+    font-family: RobotoMono-Bold;
   }
   
   .form-group {
@@ -110,7 +110,7 @@ button.submit-button:hover {
     margin: 0 auto;
     border: none;
     background-color: #242541;
-    border-radius: 10px;
+    border-radius: 8px;
     box-sizing: border-box;
     border: solid #5b5881;
     color: white;
@@ -144,7 +144,7 @@ button.submit-button:hover {
     width: 65%;
     padding: 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: #917cfa;
     color: white;
     font-size: 16px;
