@@ -151,7 +151,9 @@ body {
 }
 
 .options__logeduser {
-    display: none;
+    display: flex;
+    align-items: center;
+    /* display: none; */
 }
 
 .boton__tarjeta--login {
@@ -207,10 +209,6 @@ body {
 .header__options i {
     cursor: pointer;
     margin-left: 40px;
-}
-
-.options__tuerca {
-    padding-bottom: 6px;
 }
 
 .options__tuerca:hover {
@@ -365,6 +363,37 @@ footer {
     font-family: RobotoMono-Regular;
     font-size: 25px; 
 }
+
+.modal {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.492);
+
+}
+
+.hideElement {
+    display: none;
+}
+
+.profilepic {
+    display: flex;
+    align-items: center;
+    width: 69px;
+    height: 69px;
+    border: 1px solid var(--morado-8);
+    background: var(--morado-5);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.profilepic img {
+    height: 100%;
+}
+
+/* html, body {margin: 0; height: 100%; overflow: hidden} */ /*codigo para bloquear la pantalla*/
 
 /*Media queries*/
 @media screen and (max-width: 1400px) {
