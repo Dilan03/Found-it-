@@ -9,10 +9,12 @@
     background-color: cyan;
 }*/
 
+
 * {
     font-family: RobotoMono-Regular;
     color: white;
 }
+
 
 .cuerpo {
     display: grid;
@@ -115,21 +117,28 @@ input[type="checkbox"]:checked {
     margin-left: 20px;
 }
 
+/* CONFLICTOS
 ::placeholder{
     color: var(--morado-bg);
-}
+}*/
 
+/* CONFLICTOS
 label{
     font-family: RobotoMono-Bold;
     src: url(../assets/fonts/RobotoMono-Bold.ttf);
     padding-left: 20px;
 }
+
+*/
+
+/* CONFLICTOS
 p {
     font-family: RobotoMono-Light;
     src: url(../assets/fonts/RobotoMono-Light.ttf);
     font-size: 15px;
     padding-left: 20px;
 }
+*/
 
 .comentar{
     display: flex;
@@ -149,6 +158,8 @@ p {
     padding-top: 80px;
 }
 
+/* CONFLICTOS
 body{
     padding: 150px;
 }
+*/
