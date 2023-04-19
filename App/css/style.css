@@ -1211,9 +1211,9 @@ input[type="checkbox"]:checked {
     color: var(--blanco-);
 }
 
-::placeholder{
+/* ::placeholder{
     color: var(--morado-bg);
-}
+} */
 
 /*.izquierda_1{
     float: left;

@@ -115,14 +115,9 @@ input[type="checkbox"]:checked {
     margin-left: 20px;
 }
 
-::placeholder {
+::placeholder{
     color: var(--morado-bg);
 }
-
-/*.izquierda_1{
-    float: left;
-    margin-right: 10;
-}*/
 
 label{
     font-family: RobotoMono-Bold;
