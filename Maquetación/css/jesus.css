@@ -1,14 +1,8 @@
 /*Incio del filtro*/
-.test3 {
-    background-color: var(--amarillo-test);
-    width: 100px;
-    height: 100px;
-}
 
 /*.Elec input:checked{
     background-color: cyan;
 }*/
-
 
 * {
     font-family: RobotoMono-Regular;
@@ -106,39 +100,26 @@ input[type="checkbox"]:checked {
 
 /*Es parte de los comentarios*/
 
-#comenta {
-    height: 111px;
-    width: 1192px;
-    left: 377px;
-    top: 1118px;
-    border-radius: var(--border-8);
-    background: var(--morado-4);
-    color: var(--blanco-);
-    margin-left: 20px;
+.comentario__caja::placeholder{
+    color: var(--morado-bg);
+    font-family: RobotoMono-Regular;
+    font-size: 20px;
 }
 
-/* CONFLICTOS
-::placeholder{
-    color: var(--morado-bg);
-}*/
-
-/* CONFLICTOS
-label{
+.comentario__usuario {
     font-family: RobotoMono-Bold;
     src: url(../assets/fonts/RobotoMono-Bold.ttf);
     padding-left: 20px;
+    font-size: 20px;
 }
 
-*/
-
-/* CONFLICTOS
-p {
+.comentario__text {
     font-family: RobotoMono-Light;
     src: url(../assets/fonts/RobotoMono-Light.ttf);
     font-size: 15px;
     padding-left: 20px;
 }
-*/
+
 
 .comentar{
     display: flex;
@@ -149,17 +130,23 @@ p {
     display: flex;
     align-self: center;
     width: 80%;
-    padding-top: 80px;
-}
-.user_2{
-    display: flex;
-    align-self: center;
-    width: 80%;
-    padding-top: 80px;
+    padding-top: 45px;
 }
 
-/* CONFLICTOS
-body{
+.SeccionComentarios {
     padding: 150px;
 }
-*/
+
+.comentario__caja {
+    resize: none;
+    padding: 20px;
+    height: 80px;
+    height: 111px;
+    width: 1192px;
+    left: 377px;
+    top: 1118px;
+    border-radius: var(--border-8);
+    background: var(--morado-4);
+    color: var(--blanco-);
+    margin-left: 20px;
+}
