@@ -42,4 +42,8 @@
     <?php include 'includes/registro_form.php'?>
 </div>
 
+<div class="modal hideElement">
+    <?php include 'includes/crear_post.php'?>
+</div>
+
 <?php include_once 'includes/footer.php'?>

@@ -1,3 +1,4 @@
+/* DILAN */
 @font-face {
     font-family: RobotoMono-Bold;
     src: url(../assets/fonts/RobotoMono-Bold.ttf);
@@ -42,7 +43,6 @@
     --found-pink: rgba(219, 0, 255, 0.64);
     --gathered-aqua:rgba(0, 240, 255, 0.64);
 }
-
 
 a {
     text-decoration: none;
@@ -369,6 +369,7 @@ footer {
 .RecienteGallery__titulo {
     font-family: RobotoMono-Regular;
     font-size: 36px;
+    color: white;
 }
 
 .tarjetaSlider {
@@ -473,7 +474,425 @@ footer {
         width: 480px;
     }
 }
-/* Dilan */
+
+/* ELIAS */
+
+.registration-form {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    padding: 30px;
+    background-color: #414268;
+    border-radius: 8px;
+}
+
+.register-titulo {
+    text-align: center;
+    font-size: 32px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form input[type="password"],
+.registration-form select[type="major"] {
+    display: block;
+    width: 80%;
+    padding: 5px;
+    margin: 0 auto;
+    border: none;
+    background-color: #242541;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: solid #5b5881;
+    color: white;
+    margin-top: 20px;
+}
+
+.password-group {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    left: 300px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/ojo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+ }
+
+.password-toggle.hide-password {
+    background-image: url('../assets/icons/ojo.svg');
+}
+
+button.submit-button {
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #917cfa;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.submit-button:hover {
+    background-color: #8B008B;
+    color: #fff;
+}
+
+/*Fin css registro*/
+.login-form {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 500px;
+    height: 370px;
+    padding: 30px;
+    background-color: #414268;
+    border-radius: 8px;
+  }
+  
+  .login-titulo {
+    text-align: center;
+    font-size: 32px;
+    color: #fff;
+    margin-top: 10px;
+    font-family: RobotoMono-Bold;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .login-form input[type="email"],
+  .login-form input[type="password"],
+  .login-form input[type="text"],
+  .login-form select[type="major"] {
+    display: block;
+    width: 80%;
+    padding: 5px;
+    margin: 0 auto;
+    border: none;
+    background-color: #242541;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: solid #5b5881;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  .password-group {
+    position: relative;
+  }
+  
+  .password-toggle {
+    position: absolute;
+    top: 50%;
+    left: 415px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/icons/ojo.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+  
+  .password-toggle.hide-password {
+    background-image: url('https://img.icons8.com/ios/50/000000/invisible--v1.png');
+  }
+  
+  button.login-button {
+    display: block;
+    margin: 0 auto;
+    width: 65%;
+    padding: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #917cfa;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 70px;
+  }
+  
+  button.login-button:hover {
+    background-color: #8B008B;
+    color: #fff;
+  }
+  
+  #h1 {
+    float: right;
+    margin-right: 60px;
+  }
+  
+  #h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .field-container {
+    margin-top: 60px;
+  }
+ 
+  /*Fin css entrar*/
+.rectangulo1{
+    position: relative;
+    width: calc(70% - 80px);
+    height: calc(777px - 80px);
+    background: #181B35;
+    border-radius: 8px;
+    margin-right: 20px;
+    padding: 40px;
+}
+.rectangulo2{
+  width: 100%;
+  height: 100%;
+  background: #242641;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.titulo{
+    display: block;
+    top: 30px;
+    color: white;
+    left: 50px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 41px;
+    margin-top: 0;
+}
+.rectangulo3{
+  display: block;
+  width: calc(30% - 100px);
+  min-height: calc(677px - 80px);
+  padding:40px;
+  background: #181B35;
+  border-radius: 8px;
+}
+.diaencontrado{
+    display: block;
+
+    width:100%;
+    height: 55px;
+    left: 50px;
+    top: 115px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.DetalleObjeto {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.DetalleObjeto p {
+  margin: 0;
+}
+
+.desc{
+    display: block;
+    top: 177px;
+    left: 50px;
+    color: white;
+    font-size: 16px;
+    line-height: 21px;
+}
+.desc2{
+    display: block;
+
+    top: 204px;
+    left: 50px;
+    text-align: justify;
+    width: 100%;
+    color: white;
+    font-size: 12.5px;
+    line-height: 17px;
+}
+.cat{
+    display: block;
+
+    top: 310px;
+    left: 50px;
+    color: white;
+}
+.cate{
+    display: block;
+    margin: 25px 0;
+    top: 345px;
+    color: white;
+    width: 105px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    left: 50px;
+    background: #242641;
+    border-radius: 8px;
+    font-size: 12px;
+}
+.ub{
+  display: block;
+
+  top: 420px;
+  width: 150px;
+  left: 50px;
+  color: white;
+}
+.edificio{
+    display: block;
+    margin: 25px 0;
+    color: white;
+    width: 105px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    left: 50px;
+    background: #242641;
+    border-radius: 8px;
+    font-size: 12px;
+}
+.encontro{
+    display: block;
+
+    top: 525px;
+    left: 50px;
+    color: white;
+    font-size: 16px;
+    line-height: 21px;
+}
+.alumno{
+    display: block;
+
+    top: 540px;
+    left: 50px;
+    font-size: 19px;
+    line-height: 25px;
+    color: white;
+}
+.carrera{
+    display: block;
+
+    top: 570px;
+    left: 50px;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(255, 255, 255, 0.74);
+}
+.tel{
+    display: block;
+
+    top: 595px;
+    left: 50px;
+    font-size: 16px;
+    line-height: 21px;
+    color: white;
+    color: rgba(255, 255, 255, 0.74);
+}
+.pre{
+  text-align: center;
+  color: #8F7DFA;
+  margin-bottom: 8px !important;
+}
+.rectangulo4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 77px;
+  color: white;
+  background: #8F7DFA;
+  border-radius: 8px;
+  font-size: 19px;
+  line-height: 77px;
+}
+
+.rectangulo4:hover {
+  background: var(--morado-8);
+}
+
+.imag{
+  width: 100%;
+}
+.circle{
+  display: flex;
+  align-items: center;
+  left: 0%;
+  top: 40%;
+  height: 100px;
+  width: 100px;
+  background-color: #484C72;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.flechasImagen {
+  position: absolute;
+  top:44%;
+  width: 91%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fright{
+  margin-left: 32px;
+}
+
+.fleft{
+
+  left: 5%;
+  top: 18%;
+  bottom: 9.11%;
+}
+.fright{
+
+  left: 30%;
+  top: 18%;
+  bottom: 9.11%;
+}
+.rectangulo6{
+  display: block;
+  position: absolute;
+  width: 126px;
+  height: 48px;
+  left: 81.7%;
+  top: 22px;
+  background: rgba(0, 117, 255, 0.32);
+  border-radius: 8px;
+  text-align: center;
+  line-height: 48px;
+}
+
+.seccionBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.seccionBtn span {
+  margin: 0;
+}
+
+/* KEZA */
 
 .crearpub__form{
     position: absolute;
@@ -683,424 +1102,9 @@ input[type="radio"]:active{
     background: #181B35;
 }
 
-/* Keza */
-
-.registration-form {
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 500px;
-    height: 500px;
-    padding: 30px;
-    background-color: #414268;
-    border-radius: 8px;
-}
-
-.register-titulo {
-    text-align: center;
-    font-size: 32px;
-    color: #fff;
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.registration-form input[type="text"],
-.registration-form input[type="email"],
-.registration-form input[type="tel"],
-.registration-form input[type="password"],
-.registration-form select[type="major"] {
-    display: block;
-    width: 80%;
-    padding: 5px;
-    margin: 0 auto;
-    border: none;
-    background-color: #242541;
-    border-radius: 8px;
-    box-sizing: border-box;
-    border: solid #5b5881;
-    color: white;
-    margin-top: 20px;
-}
-
-.password-group {
-    position: relative;
-}
-
-.password-toggle {
-    position: absolute;
-    top: 50%;
-    left: 300px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background-image: url('../assets/icons/ojo.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    cursor: pointer;
- }
-
-.password-toggle.hide-password {
-    background-image: url('../assets/icons/ojo.svg');
-}
-
-button.submit-button {
-    display: block;
-    margin: 0 auto;
-    width: 30%;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    background-color: #917cfa;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button.submit-button:hover {
-    background-color: #8B008B;
-    color: #fff;
-}
-
-/*Fin css registro*/
-.login-form {
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 500px;
-    height: 370px;
-    padding: 30px;
-    background-color: #414268;
-    border-radius: 8px;
-  }
-  
-  .login-titulo {
-    text-align: center;
-    font-size: 32px;
-    color: #fff;
-    margin-top: 10px;
-    font-family: RobotoMono-Bold;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .login-form input[type="email"],
-  .login-form input[type="password"],
-  .login-form input[type="text"],
-  .login-form select[type="major"] {
-    display: block;
-    width: 80%;
-    padding: 5px;
-    margin: 0 auto;
-    border: none;
-    background-color: #242541;
-    border-radius: 8px;
-    box-sizing: border-box;
-    border: solid #5b5881;
-    color: white;
-    margin-top: 20px;
-  }
-  
-  .password-group {
-    position: relative;
-  }
-  
-  .password-toggle {
-    position: absolute;
-    top: 50%;
-    left: 415px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background-image: url('../assets/icons/ojo.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    cursor: pointer;
-  }
-  
-  .password-toggle.hide-password {
-    background-image: url('https://img.icons8.com/ios/50/000000/invisible--v1.png');
-  }
-  
-  button.login-button {
-    display: block;
-    margin: 0 auto;
-    width: 65%;
-    padding: 20px;
-    border: none;
-    border-radius: 8px;
-    background-color: #917cfa;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 70px;
-  }
-  
-  button.login-button:hover {
-    background-color: #8B008B;
-    color: #fff;
-  }
-  
-  #h1 {
-    float: right;
-    margin-right: 60px;
-  }
-  
-  #h2 {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
-  
-  .field-container {
-    margin-top: 60px;
-  }
- 
-  /*Fin css entrar*/
-.rectangulo1{
-    display: block;
-    position: absolute;
-    width: 872px;
-    height: 777px;
-    left: 310px;
-    top: 70px;
-    background: #181B35;
-    border-radius: 8px;
-}
-.rectangulo2{
-    display: block;
-    position: relative;
-    width: 746px;
-    height: 646px;
-    left: 66px;
-    top: 70px;
-    background: #242641;
-    border-radius: 8px;
-}
-.titulo{
-    display: block;
-    position: absolute;
-    top: 30px;
-    color: white;
-    left: 50px;
-    font-size: 31px;
-    font-weight: 700;
-    line-height: 41px;
-}
-.rectangulo3{
-  display: block;
-  position: absolute;
-  width: 428px;
-  height: 777px;
-  left: 1200px;
-  top: 70px;
-  background: #181B35;
-  border-radius: 8px;
-}
-.diaencontrado{
-    display: block;
-    position: absolute;
-    width: 304px;
-    height: 82px;
-    left: 50px;
-    top: 115px;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 16px;
-    line-height: 21px;
-}
-.desc{
-    display: block;
-    position: absolute;
-    top: 177px;
-    left: 50px;
-    color: white;
-    font-size: 16px;
-    line-height: 21px;
-}
-.desc2{
-    display: block;
-    position: absolute;
-    top: 204px;
-    left: 50px;
-    text-align: justify;
-    width: 295px;
-    color: white;
-    font-size: 12.5px;
-    line-height: 17px;
-}
-.cat{
-    display: block;
-    position: absolute;
-    top: 310px;
-    left: 50px;
-    color: white;
-}
-.cate{
-    display: block;
-    position: absolute;
-    top: 345px;
-    color: white;
-    width: 105px;
-    height: 32px;
-    text-align: center;
-    line-height: 32px;
-    left: 50px;
-    background: #242641;
-    border-radius: 8px;
-    font-size: 12px;
-}
-.ub{
-  display: block;
-  position: absolute;
-  top: 420px;
-  width: 150px;
-  left: 50px;
-  color: white;
-}
-.edificio{
-    display: block;
-    position: absolute;
-    top: 450px;
-    left: 50px;
-    color: white;
-    width: 105px;
-    height: 32px;
-    text-align: center;
-    line-height: 32px;
-    left: 50px;
-    background: #242641;
-    border-radius: 8px;
-    font-size: 12px;
-}
-.encontro{
-    display: block;
-    position: absolute;
-    top: 525px;
-    left: 50px;
-    color: white;
-    font-size: 16px;
-    line-height: 21px;
-}
-.alumno{
-    display: block;
-    position: absolute;
-    top: 540px;
-    left: 50px;
-    font-size: 19px;
-    line-height: 25px;
-    color: white;
-}
-.carrera{
-    display: block;
-    position: absolute;
-    top: 570px;
-    left: 50px;
-    font-size: 16px;
-    line-height: 21px;
-    color: rgba(255, 255, 255, 0.74);
-}
-.tel{
-    display: block;
-    position: absolute;
-    top: 595px;
-    left: 50px;
-    font-size: 16px;
-    line-height: 21px;
-    color: white;
-    color: rgba(255, 255, 255, 0.74);
-}
-.pre{
-    display: block;
-    position: absolute;
-    top: 630px;
-    left: 40%;
-    color: #8F7DFA;
-}
-.rectangulo4{
-  display: block;
-  position: absolute;
-  width: 300px;
-  height: 77px;
-  left: 15%;
-  top: 680px;
-  color: white;
-  background: #8F7DFA;
-  border-radius: 8px;
-  font-size: 24px;
-  line-height: 77px;
-}
-.was{
-  display: block;
-  position: absolute;
-  left: 82%;
-  top: 20%;
-  bottom: 14%;
-}
-.imag{
-  display: block;
-  position: absolute;
-  left: 42%;
-  top: 40%;
-  bottom: 14%;
-  width: 116.67px;
-  height: 93.33px;
-}
-.circle1{
-  display: block;
-  position: absolute;
-  left: 0%;
-  top: 40%;
-  height: 100px;
-  width: 100px;
-  background-color: #484C72;
-  border-radius: 100%;
-}
-.circle2{
-  display: block;
-  position: absolute;
-  left: 86.7%;
-  top: 40%;
-  height: 100px;
-  width: 100px;
-  background-color: #484C72;
-  border-radius: 100%;
-}
-.fleft{
-  position: absolute;
-  left: 5%;
-  top: 18%;
-  bottom: 9.11%;
-}
-.fright{
-  position: absolute;
-  left: 30%;
-  top: 18%;
-  bottom: 9.11%;
-}
-.rectangulo6{
-  display: block;
-  position: absolute;
-  width: 126px;
-  height: 48px;
-  left: 78.7%;
-  top: 40px;
-  background: rgba(0, 117, 255, 0.32);
-  border-radius: 8px;
-  text-align: center;
-  line-height: 48px;
-}
-
-/* Elias */
+/* JESUS */
 
 /*Incio del filtro*/
-.test3 {
-    background-color: var(--amarillo-test);
-    width: 100px;
-    height: 100px;
-}
 
 /*.Elec input:checked{
     background-color: cyan;
@@ -1110,6 +1114,7 @@ button.submit-button:hover {
     font-family: RobotoMono-Regular;
     color: white;
 }
+
 
 .cuerpo {
     display: grid;
@@ -1201,26 +1206,58 @@ input[type="checkbox"]:checked {
 
 /*Es parte de los comentarios*/
 
-#comenta {
+.comentario__caja::placeholder{
+    color: var(--morado-bg);
+    font-family: RobotoMono-Regular;
+    font-size: 20px;
+}
+
+.comentario__usuario {
+    font-family: RobotoMono-Bold;
+    src: url(../assets/fonts/RobotoMono-Bold.ttf);
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.comentario__text {
+    font-family: RobotoMono-Light;
+    src: url(../assets/fonts/RobotoMono-Light.ttf);
+    font-size: 15px;
+    padding-left: 20px;
+}
+
+
+.comentar{
+    display: flex;
+    align-self: center;
+    width: 100%;
+}
+
+.user_1{
+    display: flex;
+    align-self: center;
+    width: 80%;
+    padding-top: 45px;
+}
+
+.SeccionComentarios {
+    margin-top: 130px;
+    width: 100%;
+}
+
+.comentario__caja {
+    resize: none;
+    padding: 20px;
+    height: 80px;
     height: 111px;
-    width: 1192px;
-    left: 377px;
-    top: 1118px;
+    width: 89.5%;
     border-radius: var(--border-8);
     background: var(--morado-4);
     color: var(--blanco-);
+    margin-left: 20px;
 }
 
-::placeholder{
-    color: var(--morado-bg);
-}
-
-/*.izquierda_1{
-    float: left;
-    margin-right: 10;
-}*/
-
-/* Jesus */
+/* NORMALIZE */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 

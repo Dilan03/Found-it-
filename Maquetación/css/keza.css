@@ -1,12 +1,10 @@
 .crearpub__form{
-    position: absolute;
+    position: relative;
     width: 590.4px;
     height: 561.6px;
-    left: 350px;
-    top: 70px;
-
     background: #313450;
     border-radius: 8px;
+    margin: 0 auto;
 }
 
 .titulo-ventana{

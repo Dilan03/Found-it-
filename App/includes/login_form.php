@@ -16,4 +16,5 @@
     
     <button type="submit" class="login-button">Entrar</button>
     <p id="h2">Crear una cuenta.</p>
+    <a class="cerrar" href=""><img src="assets/icons/equis.svg"></a>
 </form>

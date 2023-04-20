@@ -1,4 +1,5 @@
 .registration-form {
+  position: relative;
     max-width: 1000px;
     margin: 0 auto;
     width: 500px;
@@ -79,6 +80,7 @@ button.submit-button:hover {
 
 /*Fin css registro*/
 .login-form {
+  position: relative;
     max-width: 1000px;
     margin: 0 auto;
     width: 500px;
@@ -394,8 +396,8 @@ button.submit-button:hover {
   position: absolute;
   width: 126px;
   height: 48px;
-  left: 78.7%;
-  top: 40px;
+  left: 81.7%;
+  top: 22px;
   background: rgba(0, 117, 255, 0.32);
   border-radius: 8px;
   text-align: center;

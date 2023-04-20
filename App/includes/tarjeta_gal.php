@@ -1,7 +1,7 @@
-<div class="tarjeta slider-wh ">
+<div class="tarjeta">
     <div class="tarjeta__etiquetas">
         <div class="etiquetaEST etiquetaEST--ancient"><span>#Ancient</span></div>
-        <div class="etiquetaEST etiquetaEST--found"><span>#Found</span></div>
+        <div class="etiquetaEST etiquetaEST--lost"><span>#Lost</span></div>
         <!-- <div class="etiquetaEST etiquetaEST--gathered"><span>#Gathered</span></div> -->
     </div>
     <div class="tarjeta__image">

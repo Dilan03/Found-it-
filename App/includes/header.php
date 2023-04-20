@@ -10,7 +10,7 @@
 <body>
     <div class="container">        
         <header class="header">
-            <i class="logo"><a href="index.html"><img src="assets/icons/logo.svg" alt="logo"></a></i>
+            <i class="logo"><a href="index.php"><img src="assets/icons/logo.svg" alt="logo"></a></i>
             <div class="search__container">
                 <form class="search__form">
                     <button class="button__search" type="submit"> <i> <img src="assets/icons/search.svg"> </i> </button>

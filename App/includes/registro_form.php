@@ -44,4 +44,5 @@
     </div>
     
     <button type="submit" class="submit-button">Registrarse</button>
+    <a class="cerrar" href=""><img src="assets/icons/equis.svg"></a>
 </form>
