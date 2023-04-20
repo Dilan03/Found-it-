@@ -174,59 +174,63 @@ button.submit-button:hover {
  
   /*Fin css entrar*/
 .rectangulo1{
-    display: block;
-    position: absolute;
-    width: 872px;
-    height: 777px;
-    left: 310px;
-    top: 70px;
+    position: relative;
+    width: calc(70% - 80px);
+    height: calc(777px - 80px);
     background: #181B35;
     border-radius: 8px;
+    margin-right: 20px;
+    padding: 40px;
 }
 .rectangulo2{
-    display: block;
-    position: relative;
-    width: 746px;
-    height: 646px;
-    left: 66px;
-    top: 70px;
-    background: #242641;
-    border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  background: #242641;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .titulo{
     display: block;
-    position: absolute;
     top: 30px;
     color: white;
     left: 50px;
-    font-size: 31px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 41px;
+    margin-top: 0;
 }
 .rectangulo3{
   display: block;
-  position: absolute;
-  width: 428px;
-  height: 777px;
-  left: 1200px;
-  top: 70px;
+  width: calc(30% - 100px);
+  min-height: calc(677px - 80px);
+  padding:40px;
   background: #181B35;
   border-radius: 8px;
 }
 .diaencontrado{
     display: block;
-    position: absolute;
-    width: 304px;
-    height: 82px;
+
+    width:100%;
+    height: 55px;
     left: 50px;
     top: 115px;
     color: rgba(255, 255, 255, 0.6);
     font-size: 16px;
     line-height: 21px;
 }
+
+.DetalleObjeto {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.DetalleObjeto p {
+  margin: 0;
+}
+
 .desc{
     display: block;
-    position: absolute;
     top: 177px;
     left: 50px;
     color: white;
@@ -235,25 +239,25 @@ button.submit-button:hover {
 }
 .desc2{
     display: block;
-    position: absolute;
+
     top: 204px;
     left: 50px;
     text-align: justify;
-    width: 295px;
+    width: 100%;
     color: white;
     font-size: 12.5px;
     line-height: 17px;
 }
 .cat{
     display: block;
-    position: absolute;
+
     top: 310px;
     left: 50px;
     color: white;
 }
 .cate{
     display: block;
-    position: absolute;
+    margin: 25px 0;
     top: 345px;
     color: white;
     width: 105px;
@@ -267,7 +271,7 @@ button.submit-button:hover {
 }
 .ub{
   display: block;
-  position: absolute;
+
   top: 420px;
   width: 150px;
   left: 50px;
@@ -275,9 +279,7 @@ button.submit-button:hover {
 }
 .edificio{
     display: block;
-    position: absolute;
-    top: 450px;
-    left: 50px;
+    margin: 25px 0;
     color: white;
     width: 105px;
     height: 32px;
@@ -290,7 +292,7 @@ button.submit-button:hover {
 }
 .encontro{
     display: block;
-    position: absolute;
+
     top: 525px;
     left: 50px;
     color: white;
@@ -299,7 +301,7 @@ button.submit-button:hover {
 }
 .alumno{
     display: block;
-    position: absolute;
+
     top: 540px;
     left: 50px;
     font-size: 19px;
@@ -308,7 +310,7 @@ button.submit-button:hover {
 }
 .carrera{
     display: block;
-    position: absolute;
+
     top: 570px;
     left: 50px;
     font-size: 16px;
@@ -317,7 +319,7 @@ button.submit-button:hover {
 }
 .tel{
     display: block;
-    position: absolute;
+
     top: 595px;
     left: 50px;
     font-size: 16px;
@@ -326,69 +328,63 @@ button.submit-button:hover {
     color: rgba(255, 255, 255, 0.74);
 }
 .pre{
-    display: block;
-    position: absolute;
-    top: 630px;
-    left: 40%;
-    color: #8F7DFA;
+  text-align: center;
+  color: #8F7DFA;
+  margin-bottom: 8px !important;
 }
 .rectangulo4{
-  display: block;
-  position: absolute;
-  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
   height: 77px;
-  left: 15%;
-  top: 680px;
   color: white;
   background: #8F7DFA;
   border-radius: 8px;
-  font-size: 24px;
+  font-size: 19px;
   line-height: 77px;
 }
-.was{
-  display: block;
-  position: absolute;
-  left: 82%;
-  top: 20%;
-  bottom: 14%;
+
+.rectangulo4:hover {
+  background: var(--morado-8);
 }
+
 .imag{
-  display: block;
-  position: absolute;
-  left: 42%;
-  top: 40%;
-  bottom: 14%;
-  width: 116.67px;
-  height: 93.33px;
+  width: 100%;
 }
-.circle1{
-  display: block;
-  position: absolute;
+.circle{
+  display: flex;
+  align-items: center;
   left: 0%;
   top: 40%;
   height: 100px;
   width: 100px;
   background-color: #484C72;
   border-radius: 100%;
+  cursor: pointer;
 }
-.circle2{
-  display: block;
+
+.flechasImagen {
   position: absolute;
-  left: 86.7%;
-  top: 40%;
-  height: 100px;
-  width: 100px;
-  background-color: #484C72;
-  border-radius: 100%;
+  top:44%;
+  width: 91%;
+  display: flex;
+  justify-content: space-between;
 }
+
+.fright{
+  margin-left: 32px;
+}
+
 .fleft{
-  position: absolute;
+
   left: 5%;
   top: 18%;
   bottom: 9.11%;
 }
 .fright{
-  position: absolute;
+
   left: 30%;
   top: 18%;
   bottom: 9.11%;
@@ -404,5 +400,16 @@ button.submit-button:hover {
   border-radius: 8px;
   text-align: center;
   line-height: 48px;
+}
+
+.seccionBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.seccionBtn span {
+  margin: 0;
 }
 

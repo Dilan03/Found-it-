@@ -124,6 +124,7 @@ input[type="checkbox"]:checked {
 .comentar{
     display: flex;
     align-self: center;
+    width: 100%;
 }
 
 .user_1{
@@ -134,7 +135,8 @@ input[type="checkbox"]:checked {
 }
 
 .SeccionComentarios {
-    padding: 150px;
+    margin-top: 130px;
+    width: 100%;
 }
 
 .comentario__caja {
@@ -142,9 +144,7 @@ input[type="checkbox"]:checked {
     padding: 20px;
     height: 80px;
     height: 111px;
-    width: 1192px;
-    left: 377px;
-    top: 1118px;
+    width: 89.5%;
     border-radius: var(--border-8);
     background: var(--morado-4);
     color: var(--blanco-);
