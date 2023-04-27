@@ -1,4 +1,4 @@
-<form class="crearpub__form">
+<form class="crearpub__form" id="test">
     <h2 class="titulo-ventana"><b>Crear publicación</b></h2>
 
     <input type="file" id="myFile" name="filename">
@@ -32,5 +32,5 @@
         </select><br>
 
     <button class="publicar">Publicar</button>
-    <a class="cerrar" href=""><img src="assets/icons/equis.svg"></a>
+    <button class="cerrar"><img src="assets/icons/equis.svg" id="cerrar_modal"></button>
 </form>

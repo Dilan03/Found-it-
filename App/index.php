@@ -3,7 +3,7 @@
 
     <section class="main hero">
         <h1 class="hero__titulo">¿Perdiste o encontraste algo? ¡Publicalo!</h1>
-        <button class="boton boton__hero">Empezar a publicar</button>
+        <button class="boton boton__hero" id="login_btn">Empezar a publicar</button>
         <img class="hero__imagen" src="assets/images/caja.png" alt="">
     </section>
 
@@ -34,16 +34,6 @@
     </section>
 </div> <!-- div cierre container -->
 
-<div class="modal hideElement">
-    <?php include 'includes/login_form.php'?>
-</div>
-
-<div class="modal hideElement">
-    <?php include 'includes/registro_form.php'?>
-</div>
-
-<div class="modal hideElement">
-    <?php include 'includes/crear_post.php'?>
-</div>
+<?php include_once 'includes/modales.php'?>
 
 <?php include_once 'includes/footer.php'?>
