@@ -6,13 +6,17 @@ const login_form = document.getElementById('login_form');
 
 const body = document.body
 
-login_btn.addEventListener('click', () => {
-   toggleModal(login_form);
-});
+if (login_btn) {
+   login_btn.addEventListener('click', () => {
+      toggleModal(login_form);
+   });
+}
 
-crear_post_btn.addEventListener('click', () => {
-   toggleModal(crear_post_form);
-});
+if (crear_post_btn) {
+   crear_post_btn.addEventListener('click', () => {
+      toggleModal(crear_post_form);
+   });
+}
 
 window.addEventListener('click', (e) => {
    if (e.target.id == 'crear_post_form') {
