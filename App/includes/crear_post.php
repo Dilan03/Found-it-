@@ -1,4 +1,4 @@
-<form class="crearpub__form" id="test">
+<form class="crearpub__form movLR">
     <h2 class="titulo-ventana"><b>Crear publicación</b></h2>
 
     <input type="file" id="myFile" name="filename">

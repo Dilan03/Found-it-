@@ -1,3 +1,41 @@
+/* NUEVO */
+.drop {
+    animation: drop 0.5s ease forwards;
+}
+
+.movLR {
+    animation: opacidad 0.4s ease forwards;
+}
+
+@keyframes opacidad {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 /* DILAN */
 @font-face {
     font-family: RobotoMono-Bold;
@@ -417,14 +455,12 @@ footer {
     position: absolute;
     display: flex;
     align-items: center;
+    z-index: 100;
     width: 100%;
-    height: 100%;
+    top: 0;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.492);
 
-}
-
-.hideElement {
-    display: none;
 }
 
 .profilepic {
@@ -446,7 +482,7 @@ footer {
 
 .bloquear {
     margin: 0;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -651,10 +687,12 @@ button.login-button:hover {
     margin-right: 60px;
 }
 
-#h2 {
+.crear_cuenta {
+    display: block;
     text-align: center;
-    margin-top: 20px;
+    color: var(--morado-3);
     margin-bottom: 30px;
+    margin: 20px auto;
 }
 
 .field-container {
@@ -1139,8 +1177,10 @@ input[type="radio"]:active {
     height: 0px;
     right: 70px;
     top: 5px;
+}
 
-    background: #181B35;
+.cerrar:hover {
+    opacity: 0.8;
 }
 
 /* JESUS */
@@ -1165,6 +1205,7 @@ input[type="radio"]:active {
         "Clasificación  Ubicación_1  Ubicación_2  Ubicación_3  Ubicación_4  Ubicación_5  Ubicación_6  Ubicación_7";
     min-height: 160px;
     margin-top: 19px;
+    transition: 1s;
     /* display: none; */
 }
 
@@ -1296,6 +1337,13 @@ input[type="checkbox"]:checked {
     background: var(--morado-4);
     color: var(--blanco-);
     margin-left: 20px;
+}
+
+/*HideElement*/
+
+.hideElement {
+    display: none;
+
 }
 
 /* NORMALIZE */

@@ -1,5 +1,5 @@
-<button class="boton__filtro"><img src="assets/icons/barras.svg"><span>Filtro</span></button>
-<div class="cuerpo">
+<button class="boton__filtro" id="filtro_btn"><img src="assets/icons/barras.svg"><span>Filtro</span></button>
+<div class="cuerpo drop hideElement" id="filtro_cuerpo">
     <div class="Clasificación">
         <h1>Clasificación</h1>
         <div>

@@ -1,4 +1,4 @@
-<form class="login-form">
+<form class="login-form movLR">
     <h2 class="login-titulo">HOLA OTRA VEZ!</h2>
     <div class="field-container">
         <div class="form-group">
@@ -15,6 +15,8 @@
     </div>
     
     <button type="submit" class="login-button">Entrar</button>
-    <a href="#" id="h2">Crear una cuenta.</a>
+    <span>
+        <a href="#" class="crear_cuenta" id="registro_btn">Crear una cuenta.</a>
+    </span>
     <button class="cerrar"><img src="assets/icons/equis.svg" id="cerrar_modal"></button>
 </form>

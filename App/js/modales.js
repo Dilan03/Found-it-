@@ -3,8 +3,16 @@ const crear_post_form = document.getElementById('crear_post_form');
 const cerrar_modal = document.getElementById('cerrar_modal');
 const login_btn = document.getElementById('login_btn');
 const login_form = document.getElementById('login_form');
+const registro_btn = document.getElementById('registro_btn');
+const registro_form = document.getElementById('registro_form');
 
 const body = document.body
+
+if (registro_btn) {
+   registro_btn.addEventListener('click', () => {
+      toggleModal(registro_form);
+   });
+}
 
 if (login_btn) {
    login_btn.addEventListener('click', () => {
@@ -23,6 +31,9 @@ window.addEventListener('click', (e) => {
       toggleModal(crear_post_form);
    } else if (e.target.id == 'login_form') {
       toggleModal(login_form);
+   } else if (e.target.id == 'registro_form') {
+      toggleModal(registro_form);
+      toggleModal(login_form);
    }
 
    if (e.target.id == 'cerrar_modal') {
@@ -33,6 +44,7 @@ window.addEventListener('click', (e) => {
 });
 
 const toggleModal = (modal) => {
+   window.scrollTo(0, 0);
    modal.classList.toggle('hideElement');
    body.classList.toggle('bloquear');
 }

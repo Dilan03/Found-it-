@@ -1,4 +1,4 @@
-<form class="registration-form">
+<form class="registration-form movLR">
     <h2 class="register-titulo">Registrate</h2>
     
     <div class="form-group">
