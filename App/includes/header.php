@@ -21,7 +21,12 @@
             <div class="header__options">
                 <div class="options__logeduser">
                     <i id="crear_post_btn"><img class="options__upload" src="assets/icons/upload.svg"></i>
-                    <i><img class="options__tuerca" src="assets/icons/tuerca.svg"></i>
+                    <i id="options_btn"><img class="options__tuerca" src="assets/icons/tuerca.svg"></i>
+                    <div class="options__desplegable hideElement" id="options_desplegable">
+                        <a href="userposts.php">Mis publicaciones</a>
+                        <a href="#">Editar información</a>
+                        <a href="#">Cerrar sesión</a>
+                    </div>
                     <i>
                         <img class="options__user hideElement" src="assets/icons/user-box.svg" >
                         

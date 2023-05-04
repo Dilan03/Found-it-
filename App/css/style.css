@@ -1,4 +1,61 @@
 /* NUEVO */
+.comentario_opt {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: var(--gris-op);
+    top: 50px;
+    left: 50px;
+}
+
+.options__desplegable-llave {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: var(--gris-op);
+    top: 92px;
+    left: 1149px;
+    z-index: 1000;
+}
+
+.detalles_opt {
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+}
+
+.options__desplegable a:not(:last-child),
+.options__desplegable-llave a:not(:last-child) {
+    border-bottom: 2px solid var(--morado-6);
+}
+
+.options__desplegable {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: var(--gris-op);
+    top: 92px;
+    left: 15px;
+    z-index: 1000;
+}
+
+.options__desplegable a,
+.options__desplegable-llave a {
+    cursor: pointer;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.options__desplegable a:hover,
+.options__desplegable-llave a:hover {
+    color: var(--morado-8);
+}
+
 .drop {
     animation: drop 0.5s ease forwards;
 }
@@ -341,6 +398,10 @@ footer {
     content: url(../assets/icons/home-active.svg);
 }
 
+.icon__home-active {
+    content: url(../assets/icons/home-active.svg);
+}
+
 .icon__lost img {
     content: url(../assets/icons/lost.svg);
 }
@@ -349,11 +410,19 @@ footer {
     content: url(../assets/icons/lost-active.svg);
 }
 
+.icon__lost-active {
+    content: url(../assets/icons/lost-active.svg);
+}
+
 .icon__found img {
     content: url(../assets/icons/found.svg);
 }
 
 .icon__found:hover img {
+    content: url(../assets/icons/found-active.svg);
+}
+
+.icon__found-active {
     content: url(../assets/icons/found-active.svg);
 }
 
@@ -455,7 +524,7 @@ footer {
     position: absolute;
     display: flex;
     align-items: center;
-    z-index: 100;
+    z-index: 10000;
     width: 100%;
     top: 0;
     bottom: 0;
@@ -516,6 +585,10 @@ footer {
 
     .hero__imagen {
         width: 480px;
+    }
+
+    .options__desplegable-llave {
+        left: 900px;
     }
 }
 
@@ -722,6 +795,7 @@ button.login-button:hover {
     display: block;
     top: 30px;
     color: white;
+    width: 100px;
     left: 50px;
     font-size: 28px;
     font-weight: 700;
@@ -1317,8 +1391,6 @@ input[type="checkbox"]:checked {
 
 .user_1 {
     display: flex;
-    align-self: center;
-    width: 80%;
     padding-top: 45px;
 }
 

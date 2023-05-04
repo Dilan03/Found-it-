@@ -11,10 +11,6 @@
         <?php include 'includes/tarjeta_gal.php'?>
         <?php include 'includes/tarjeta_gal.php'?>
         <?php include 'includes/tarjeta_gal.php'?>
-        <?php include 'includes/tarjeta_gal.php'?>
-        <?php include 'includes/tarjeta_gal.php'?>
-        <?php include 'includes/tarjeta_gal.php'?>
-        <?php include 'includes/tarjeta_gal.php'?>
         
     </section>
 </div><!-- div cierre container -->

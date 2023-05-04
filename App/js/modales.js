@@ -10,6 +10,7 @@ const body = document.body
 
 if (registro_btn) {
    registro_btn.addEventListener('click', () => {
+      toggleModal(login_form);
       toggleModal(registro_form);
    });
 }
@@ -33,7 +34,11 @@ window.addEventListener('click', (e) => {
       toggleModal(login_form);
    } else if (e.target.id == 'registro_form') {
       toggleModal(registro_form);
-      toggleModal(login_form);
+   }
+
+   if (e.target.parentElement.id != 'options_desplegable' && options_btn.classList.contains('active') && e.target.parentElement.id != 'options_btn') {
+      options_desplegable.classList.toggle('hideElement');
+      options_btn.classList.remove('active');
    }
 
    if (e.target.id == 'cerrar_modal') {
