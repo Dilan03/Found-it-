@@ -3,6 +3,16 @@ const options_btn = document.getElementById('options_btn');
 const options_desplegable_llave = document.getElementById('options_desplegable_llave');
 const options_desplegable_llave_btn = document.getElementById('options_desplegable_llave_btn');
 
+const borrar_comentario_btn = document.querySelectorAll('.borrar_comentario_btn');
+
+if (borrar_comentario_btn) {
+   for (let i = 0; i < borrar_comentario_btn.length; i++) {
+      borrar_comentario_btn[i].addEventListener('click', () => {
+         toggleModal(borrar_comentario_form)
+      })
+   }
+}
+
 window.addEventListener('click', (e) => {
    if (e.target.parentElement.id != 'options_desplegable' && options_btn.classList.contains('active') && e.target.parentElement.id != 'options_btn') {
       options_desplegable.classList.toggle('hideElement');

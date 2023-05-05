@@ -5,6 +5,18 @@ const login_btn = document.getElementById('login_btn');
 const login_form = document.getElementById('login_form');
 const registro_btn = document.getElementById('registro_btn');
 const registro_form = document.getElementById('registro_form');
+const editar_registro_btn = document.getElementById('editar_registro_btn');
+const editar_registro_form = document.getElementById('editar_registro_form');
+const editar_post_btn = document.getElementById('editar_post_btn');
+const editar_post_form = document.getElementById('editar_post_form');
+const eliminar_post_btn = document.getElementById('eliminar_post_btn');
+const eliminar_post_form = document.getElementById('eliminar_post_form');
+const cerrar_sesion_btn = document.getElementById('cerrar_sesion_btn');
+const cerrar_sesion_form = document.getElementById('cerrar_sesion_form');
+const marcar_recuperado_btn = document.getElementById('marcar_recuperado_btn');
+const marcar_recuperado_form = document.getElementById('marcar_recuperado_form');
+
+const borrar_comentario_form = document.getElementById('borrar_comentario_form');
 
 const body = document.body
 
@@ -16,15 +28,31 @@ if (registro_btn) {
 }
 
 if (login_btn) {
-   login_btn.addEventListener('click', () => {
-      toggleModal(login_form);
-   });
+   login_btn.addEventListener('click', () => toggleModal(login_form));
 }
 
 if (crear_post_btn) {
-   crear_post_btn.addEventListener('click', () => {
-      toggleModal(crear_post_form);
-   });
+   crear_post_btn.addEventListener('click', () => toggleModal(crear_post_form));
+}
+
+if (editar_registro_btn) {
+   editar_registro_btn.addEventListener('click', () => toggleModal(editar_registro_form));
+}
+
+if (editar_post_btn) {
+   editar_post_btn.addEventListener('click', () => toggleModal(editar_post_form));
+}
+
+if (eliminar_post_btn) {
+   eliminar_post_btn.addEventListener('click', () => toggleModal(eliminar_post_form));
+}
+
+if (cerrar_sesion_btn) {
+   cerrar_sesion_btn.addEventListener('click', () => toggleModal(cerrar_sesion_form));
+}
+
+if (marcar_recuperado_btn) {
+   marcar_recuperado_btn.addEventListener('click', () => toggleModal(marcar_recuperado_form));
 }
 
 window.addEventListener('click', (e) => {
@@ -34,6 +62,18 @@ window.addEventListener('click', (e) => {
       toggleModal(login_form);
    } else if (e.target.id == 'registro_form') {
       toggleModal(registro_form);
+   } else if (e.target.id == 'editar_registro_form') {
+      toggleModal(editar_registro_form);
+   } else if (e.target.id == 'editar_post_form') {
+      toggleModal(editar_post_form);
+   } else if (e.target.id == 'eliminar_post_form') {
+      toggleModal(eliminar_post_form);
+   } else if (e.target.id == 'cerrar_sesion_form') {
+      toggleModal(cerrar_sesion_form);
+   } else if (e.target.id == 'marcar_recuperado_form') {
+      toggleModal(marcar_recuperado_form);
+   } else if (e.target.id == 'borrar_comentario_form') {
+      toggleModal(borrar_comentario_form);
    }
 
    if (e.target.parentElement.id != 'options_desplegable' && options_btn.classList.contains('active') && e.target.parentElement.id != 'options_btn') {

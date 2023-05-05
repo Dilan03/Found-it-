@@ -24,8 +24,8 @@
                     <i id="options_btn"><img class="options__tuerca" src="assets/icons/tuerca.svg"></i>
                     <div class="options__desplegable hideElement" id="options_desplegable">
                         <a href="userposts.php">Mis publicaciones</a>
-                        <a href="#">Editar información</a>
-                        <a href="#">Cerrar sesión</a>
+                        <a href="#" id="editar_registro_btn">Editar información</a>
+                        <a href="#" id="cerrar_sesion_btn" >Cerrar sesión</a>
                     </div>
                     <i>
                         <img class="options__user hideElement" src="assets/icons/user-box.svg" >

@@ -1,4 +1,18 @@
 /* NUEVO */
+.eliminar_post {
+    height: 150px !important;
+}
+
+.eliminar_botones {
+    display: flex;
+    position: relative;
+    top: -50px;
+}
+
+.eliminar_botones button {
+    width: 200px !important;
+}
+
 .comentario_opt {
     display: flex;
     flex-direction: column;
@@ -659,8 +673,8 @@ footer {
 button.submit-button {
     display: block;
     margin: 0 auto;
-    width: 30%;
-    padding: 10px;
+    width: 36%;
+    padding: 20px;
     border: none;
     border-radius: 8px;
     background-color: #917cfa;
@@ -1049,10 +1063,9 @@ button.login-button:hover {
     height: 43.8px;
     left: 125.6px;
     top: 10px;
-
     font-style: normal;
     font-weight: 420;
-    font-size: 33px;
+    font-size: 28px;
     line-height: 43.8px;
 
     color: #FFFFFF;
