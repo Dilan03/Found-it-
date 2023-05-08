@@ -11,6 +11,13 @@
     </div>
     <div class="rectangulo3">
         <section>
+            <i id="options_desplegable_llave_btn"><img class="detalles_opt" src="assets/icons/llave.svg"></i>
+            <div class="options__desplegable-llave hideElement" id="options_desplegable_llave">
+                <a href="#" id="eliminar_post_btn">Eliminar</a>
+                <a href="#" id="editar_post_btn">Editar</a>
+                <a href="#" id="marcar_recuperado_btn">Recuperado</a>
+            </div>
+
             <h2 class="titulo">
                 Objeto encontrado
             </h2>

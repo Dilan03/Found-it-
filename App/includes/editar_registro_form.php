@@ -1,5 +1,5 @@
 <form class="registration-form movLR">
-    <h2 class="register-titulo">Registrate</h2>
+    <h2 class="register-titulo">Editar informacion</h2>
     
     <div class="form-group">
         <input type="text" id="first-name" name="first-name" placeholder="Nombres" required>
@@ -43,6 +43,6 @@
         <input type="text" id="phone" name="phone" placeholder="Número de teléfono" pattern="[0-9]+" title="Ingrese un número de teléfono válido" required >
     </div>
     
-    <button type="submit" class="submit-button">Registrarse</button>
+    <button type="submit" class="submit-button">Confirmar</button>
     <a class="cerrar" href=""><img src="assets/icons/equis.svg"></a>
 </form>
