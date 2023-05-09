@@ -1,7 +1,10 @@
 <div class="DetalleObjeto">
     <div class="rectangulo1">
         <div class="rectangulo2">
-            <img src="assets/images/rat-jam.gif" alt="imagenes" class="imag">
+            <div class="imagenes">
+                <img src="assets/images/test.jpg" alt="imagenes" class="imag">
+                <img src="assets/images/rat-jam.gif" alt="imagenes" class="imag">
+            </div>
             <div class="flechasImagen">
                 <span class="circle"> <img src="assets/icons/flechaizquierda.svg" alt="" class="fleft"></span>
                 <span class="circle"> <img src="assets/icons/flechaderecha.svg" alt="" class="fright"></span>
