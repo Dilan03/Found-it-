@@ -569,8 +569,6 @@ footer {
 }
 
 .profilepic {
-    display: flex;
-    align-items: center;
     width: 69px;
     height: 69px;
     border: 1px solid var(--morado-8);
@@ -580,6 +578,7 @@ footer {
 }
 
 .profilepic img {
+    width: 100%;
     height: 100%;
 }
 
@@ -635,7 +634,7 @@ footer {
     max-width: 1000px;
     margin: 0 auto;
     width: 500px;
-    height: 500px;
+    height: 590px;
     padding: 30px;
     background-color: #414268;
     border-radius: 8px;

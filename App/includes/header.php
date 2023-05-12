@@ -19,24 +19,30 @@
                 </form>
             </div>
             <div class="header__options">
-                <div class="options__logeduser">
-                    <i id="crear_post_btn"><img class="options__upload" src="assets/icons/upload.svg"></i>
-                    <i id="options_btn"><img class="options__tuerca" src="assets/icons/tuerca.svg"></i>
-                    <div class="options__desplegable hideElement" id="options_desplegable">
-                        <a href="userposts.php">Mis publicaciones</a>
-                        <a href="#" id="editar_registro_btn">Editar información</a>
-                        <a href="#" id="cerrar_sesion_btn" >Cerrar sesión</a>
-                    </div>
-                    <i>
-                        <img class="options__user hideElement" src="assets/icons/user-box.svg" >
-                        
-                        <div class="profilepic">
-                            <img src="assets/images/perroperfil.png" alt="profilepic">
+                <?php if(!empty($_SESSION["id"])) { ?>
+                    <div class="options__logeduser">
+                        <i id="crear_post_btn"><img class="options__upload" src="assets/icons/upload.svg"></i>
+                        <i id="options_btn"><img class="options__tuerca" src="assets/icons/tuerca.svg"></i>
+                        <div class="options__desplegable hideElement" id="options_desplegable">
+                            <a href="userposts.php">Mis publicaciones</a>
+                            <a href="#" id="editar_registro_btn">Editar información</a>
+                            <a href="#" id="cerrar_sesion_btn" >Cerrar sesión</a>
                         </div>
-                    </i>
-                </div>
-                <div class="button__login hideElement">
-                    <button type="submit" class="boton boton__tarjeta boton__tarjeta--login">Iniciar sesión</button>
-                </div>
+                        <i>
+                            <img class="options__user hideElement" src="assets/icons/user-box.svg" >
+                            
+                            <div class="profilepic">
+                                <?php
+                                    echo '<img src=data:image;base64,'.$row['foto'].' alt="profilepic"/>'
+                                ?>
+                                <!-- <img src="assets/images/perroperfil.png" alt="profilepic"> -->
+                            </div>
+                        </i>
+                    </div>
+                <?php } else { ?>
+                    <div class="button__login">
+                        <button type="submit" class="boton boton__tarjeta boton__tarjeta--login" id="login_btn2">Iniciar sesión</button>
+                    </div>
+                <?php }?>
             </div>
         </header>

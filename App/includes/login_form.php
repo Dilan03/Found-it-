@@ -1,4 +1,4 @@
-<form class="login-form movLR">
+<form class="login-form movLR" method="POST">
     <h2 class="login-titulo">HOLA OTRA VEZ!</h2>
     <div class="field-container">
         <div class="form-group">
@@ -14,7 +14,7 @@
         </div>
     </div>
     
-    <button type="submit" class="login-button">Entrar</button>
+    <button type="submit" name="loginn" class="login-button">Entrar</button>
     <span>
         <a href="#" class="crear_cuenta" id="registro_btn">Crear una cuenta.</a>
     </span>

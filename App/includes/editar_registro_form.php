@@ -2,6 +2,10 @@
     <h2 class="register-titulo">Editar informacion</h2>
     
     <div class="form-group">
+        <input type="text" id="no-control" name="no-control" placeholder="Número de control" required>
+    </div>
+    
+    <div class="form-group">
         <input type="text" id="first-name" name="first-name" placeholder="Nombres" required>
     </div>
     
