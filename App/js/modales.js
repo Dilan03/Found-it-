@@ -2,6 +2,7 @@ const crear_post_btn = document.getElementById('crear_post_btn');
 const crear_post_form = document.getElementById('crear_post_form');
 const cerrar_modal = document.getElementById('cerrar_modal');
 const login_btn = document.getElementById('login_btn');
+const login_btn2 = document.getElementById('login_btn2');
 const login_form = document.getElementById('login_form');
 const registro_btn = document.getElementById('registro_btn');
 const registro_form = document.getElementById('registro_form');
@@ -27,8 +28,12 @@ if (registro_btn) {
    });
 }
 
-if (login_btn) {
+if (login_btn || login_btn2) {
    login_btn.addEventListener('click', () => toggleModal(login_form));
+}
+
+if (login_btn2) {
+   login_btn2.addEventListener('click', () => toggleModal(login_form));
 }
 
 if (crear_post_btn) {
