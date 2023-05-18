@@ -21,20 +21,19 @@
             <?php include 'includes/detalles.php'?>
 
             <div class="SeccionComentarios">
-                <div class="comentar">
+                <form class="comentar">
                     <img class="options__user hideElement" src="assets/icons/user-box.svg">
             
                     <div class="profilepic">
                         <img src="assets/images/perroperfil.png" alt="profilepic">
                     </div>
                     <textarea name="comenta" cols="100" rows="10" placeholder="Añadir un comentario" class="comentario__caja"></textarea>
+                </form>
+                <br>
+                <div  class="btn_comentario">
+                    <button type="submit" name="enviar">Enviar</button>
                 </div>
-                <br><br>
-                <input type="submit" name="enviar" class="btn_comentario">
 
-                <?php include 'includes/comentario.php'?>
-                <?php include 'includes/comentario.php'?>
-                <?php include 'includes/comentario.php'?>
                 <?php include 'includes/comentario.php'?>
             
             </div>

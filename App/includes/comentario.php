@@ -1,15 +1,16 @@
 <?php
-    /*include("conexion.php")
-
     if(isset($_POST['enviar'])){
+
         $comentario = $_POST['comenta'];
         //  insert into comentarios (id, id_autor, contenido, fecha_publicacion, id_post) 
         //  values (1, 'L21550135', 'Comentario de prueba', '2023-05-01 00:00:0', 1);
-        $sql="Insert into comentarios (id, id_autor, contenido, fecha_publicacion, id_post) values ('".$comenta"')";
-    }*/
+        $sql = "Insert into comentarios (id, id_autor, contenido, fecha_publicacion, id_post) values ('"$_POST['comenta']."', '"$_SESSION["id"] = $row["no_control"]."', NOW())";
+        header("location: index.php");
+
+    }
 ?>
 
-
+<form action="">
 <div class="user_1">
     <img class="options__user hideElement" src="assets/icons/user-box.svg">
     <span>
@@ -25,3 +26,4 @@
         </p>
     </div>
 </div>
+</form>

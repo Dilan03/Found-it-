@@ -1446,6 +1446,11 @@ input[type="checkbox"]:checked {
     margin-left: 20px;
 }
 
+.btn_comentario{
+    display:flex;
+    padding-left: 94%;
+}
+
 /*HideElement*/
 
 .hideElement {
