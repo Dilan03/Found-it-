@@ -1,5 +1,5 @@
 <?php
-    if(isset($_POST['enviar'])){
+    /*if(isset($_POST['enviar'])){
 
         $comentario = $_POST['comenta'];
         //  insert into comentarios (id, id_autor, contenido, fecha_publicacion, id_post) 
@@ -7,7 +7,13 @@
         $sql = "Insert into comentarios (id, id_autor, contenido, fecha_publicacion, id_post) values ('"$_POST['comenta']."', '"$_SESSION["id"] = $row["no_control"]."', NOW())";
         header("location: index.php");
 
-    }
+    }*/
+
+   if(isset($_POST['enviar'])) {
+    $query = mysql_query("INSERT INTO comentarios (id, id_autor, contenido, fecha_publicacion, id_post) values ('".$_POST['comenta']."','".$_SESSION["id"] = $row["no_control"]."',NOW())");
+    mysqli_query($conn, $query);
+    if($query) { header("Location: index.php"); }
+    }
 ?>
 
 <form action="">
