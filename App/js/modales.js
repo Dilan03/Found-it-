@@ -28,7 +28,7 @@ if (registro_btn) {
    });
 }
 
-if (login_btn || login_btn2) {
+if (login_btn) {
    login_btn.addEventListener('click', () => toggleModal(login_form));
 }
 

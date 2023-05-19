@@ -1,16 +1,27 @@
 <div class="DetalleObjeto">
     <div class="rectangulo1">
         <div class="rectangulo2">
-            <div class="imagenes">
-                <img src="assets/images/test.jpg" alt="imagenes" class="imag">
-                <img src="assets/images/rat-jam.gif" alt="imagenes" class="imag">
-            </div>
-            <div class="flechasImagen">
-                <span class="circle"> <img src="assets/icons/flechaizquierda.svg" alt="" class="fleft"></span>
-                <span class="circle"> <img src="assets/icons/flechaderecha.svg" alt="" class="fright"></span>
-            </div>
+            <?php
+                echo '<img width = 100% src=data:image;base64,'.$row_detalle['imagen'].' alt="profilepic"/>'
+            ?>
         </div>
-        <div class="rectangulo6">#LOST</div>
+            <?php
+                echo '
+                    <div class="tarjeta__etiquetas">';
+                    if (($row_detalle['ancient']) == 'ancient') {
+                        echo '<div class="etiquetaEST etiquetaEST--ancient"><span>#Ancient</span></div>';
+                    }
+                    if (($row_detalle['found']) == 'found') {
+                        echo '<div class="etiquetaEST etiquetaEST--found"><span>#found</span></div>';
+                    }
+                    if (($row_detalle['lost']) == 'lost') {
+                        echo '<div class="etiquetaEST etiquetaEST--lost"><span>#Lost</span></div>';
+                    }
+                    if (($row_detalle['gathered']) == 'gathered') {
+                        echo '<div class="etiquetaEST etiquetaEST--gathered"><span>#Gathered</span></div>';
+                    }
+                echo '</div>'; 
+            ?>
     </div>
     <div class="rectangulo3">
         <section>
@@ -21,28 +32,43 @@
                 <a href="#" id="marcar_recuperado_btn">Recuperado</a>
             </div>
 
+
             <h2 class="titulo">
-                Objeto encontrado
+                <?php echo $row_detalle['nombre_objeto']?>
             </h2>
-            <label for="encontrado" class="diaencontrado">Encontrado el día 27/03/2023</label>
+            <label for="encontrado" class="diaencontrado">
+                <?php
+                    if($row_detalle['found'] == 'found') echo 'Encontrado';
+                    elseif ($row_detalle['lost'] == 'lost') echo 'Perdido';
+                ?> 
+                el día <?php echo substr($row_detalle['fecha_publicacion'], 0,10)?></label>
             <br>
             <label for="descripcion" class="desc">Descripción</label>
-            <p class="desc2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam doloremque iure pariatur alias totam quasi 
-                distinctio delectus sunt non? Perspiciatis magni.</p>
+            <p class="desc2"><?php echo $row_detalle['descripcion']?></p>
             <br>
             <label for="categoría" class="cat">Categoría</label>
             
-            <label for="cat" class="cate">electrónicos</label>
+            <label for="cat" class="cate"><?php echo $row_detalle['cat']?></label>
             
-            <label for="ubi" class="ub">Encontrado en</label>
+            <label for="ubi" class="ub">
+                <?php
+                    if($row_detalle['found'] == 'found') echo 'Encontrado';
+                    elseif ($row_detalle['lost'] == 'lost') echo 'Perdido';
+                ?>
+                en</label>
             <div class="rectangulo5">
-                <label for="ubi" class="edificio">Ed. F</label>
+                <label for="ubi" class="edificio">Ed. <?php echo $row_detalle['ubicacion']?></label>
             </div>
-            <label for="encontro" class="encontro">Lo encontró</label>
+            <label for="encontro" class="encontro">Lo
+                <?php
+                    if($row_detalle['found'] == 'found') echo 'encontró';
+                    elseif ($row_detalle['lost'] == 'lost') echo 'perdió';
+                ?>
+            </label>
             <br>
-            <p class="alumno">Rubén Nuñez Quirós</p>
-            <p class="carrera">Sistemas Computacionales</p>
-            <p class="tel">614 952 8423</p>
+            <p class="alumno"><?php echo $row_detalle['nombre']?> <?php echo $row_detalle['apellido']?></p>
+            <p class="carrera"><?php echo $row_detalle['carrera']?></p>
+            <p class="tel"><?php echo $row_detalle['telefono']?></p>
 
             <div class="seccionBtn">
                 <p class="pre">¿Es tuyo?</p>

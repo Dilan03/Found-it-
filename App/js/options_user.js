@@ -14,9 +14,11 @@ if (borrar_comentario_btn) {
 }
 
 window.addEventListener('click', (e) => {
-   if (e.target.parentElement.id != 'options_desplegable' && options_btn.classList.contains('active') && e.target.parentElement.id != 'options_btn') {
-      options_desplegable.classList.toggle('hideElement');
-      options_btn.classList.remove('active');
+   if (options_btn) {
+      if (e.target.parentElement.id != 'options_desplegable' && options_btn.classList.contains('active') && e.target.parentElement.id != 'options_btn') {
+         options_desplegable.classList.toggle('hideElement');
+         options_btn.classList.remove('active');
+      }
    }
 
    if (options_desplegable_llave_btn) {
