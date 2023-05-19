@@ -12,12 +12,36 @@
     <div class="container">        
         <header class="header">
             <i class="logo"><a href="index.php"><img src="assets/icons/logo.svg" alt="logo"></a></i>
-            <div class="search__container">
-                <form class="search__form">
-                    <button class="button__search" type="submit"> <i> <img src="assets/icons/search.svg"> </i> </button>
-                    <input type="text" placeholder="Buscar...">
-                </form>
-            </div>
+            <?php
+            if (isset($_POST['buscador'])) {
+                $buscar = $_POST['buscador'];
+
+                // Escapar caracteres especiales en la cadena de búsqueda
+                $buscar = mysqli_real_escape_string($conn, $buscar);
+
+                // Construir la consulta SQL con la condición de búsqueda
+                $consulta_posts = "
+                SELECT p.id, p.imagen, detalles.nombre_objeto, detalles.fecha_publicacion, clas.nombre,
+                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'ancient' AND etiquetas.id_post = p.id) as ancient,
+                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'lost' AND etiquetas.id_post = p.id) as lost,
+                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'found' AND etiquetas.id_post = p.id) as found,
+                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'gathered' AND etiquetas.id_post = p.id) as gathered
+                FROM posts p
+                INNER JOIN detallesposts detalles ON p.id_detallesPosts = detalles.id
+                INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id
+                WHERE detalles.nombre_objeto LIKE '%$buscar%';";
+
+                // Ejecutar la consulta y mostrar los resultados
+                $result_posts = mysqli_query($conn, $consulta_posts);
+                // ...
+            }
+            ?>
+<div class="search__container">
+    <form class="search__form" method="POST">
+        <button class="button__search" type="submit"> <i> <img src="assets/icons/search.svg"> </i> </button>
+        <input type="text" placeholder="Buscar..." name="buscador">
+    </form>
+</div>
             <div class="header__options">
                 <?php if(!empty($_SESSION["id"])) { ?>
                     <div class="options__logeduser">
