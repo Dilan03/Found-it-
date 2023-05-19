@@ -1,50 +1,37 @@
 <button class="boton__filtro" id="filtro_btn"><img src="assets/icons/barras.svg"><span>Filtro</span></button>
 <form method="POST">
-    <button class="filtrarse" id="filtrar_btn" name="filtrar"><img src="assets/icons/barras.svg"><span></span></button>
+    <button class="filtrarse" id="filtrar_btn"><img src="assets/icons/barras.svg"><span></span></button>
 </form>
 <?php
-/*
-// Verificar si se ha enviado el formulario
-if (isset($_POST['filtrar'])) {
-    $clausulas = "";
-    // Obtener los valores seleccionados en los checkboxes
-    $electronicos = isset($_POST['Electronicos']) ? 1 : 0;
-    $ropa = isset($_POST['Ropa']) ? 1 : 0;
-    $otros = isset($_POST['Otros']) ? 1 : 0;
-    var_dump($ropa);
-     // Agregar las cláusulas según las categorías seleccionadas
-     if ($electronicos) {
-        $clausulas = " WHERE clas.nombre = 'Electronicos'";
-    }
-    if ($ropa) {
-        $clausulas = " WHERE clas.nombre = 'Ropa'";
-    }
-    if ($otros) {
-        $clausulas  = " WHERE clas.nombre = 'Otros'";
-    }
-    // Construir la consulta SQL con las categorías seleccionadas
-    $consulta_posts = "
-    SELECT p.id, p.imagen, detalles.nombre_objeto, detalles.fecha_publicacion, clas.nombre,
-    (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'ancient' AND etiquetas.id_post = p.id) as ancient,
-    (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'lost' AND etiquetas.id_post = p.id) as lost,
-    (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'found' AND etiquetas.id_post = p.id) as found,
-    (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'gathered' AND etiquetas.id_post = p.id) as gathered
-    FROM posts p
-    INNER JOIN detallesposts detalles ON p.id_detallesPosts = detalles.id
-    INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id".$clausulas.';';
+            if (isset($_POST['filtrar'])) {
+                $filtrador = $_POST['filtrar'];
 
-    // Combinar las cláusulas con "OR"
-    //$consulta_posts .= " " . implode(" OR ", $clausulas);
+                // Escapar caracteres especiales en la cadena de búsqueda
+                $filtrador = mysqli_real_escape_string($conn, $filtrador);
 
-    // Ejecutar la consulta y mostrar los resultados
-    $result_posts = mysqli_query($conn, $consulta_posts);
-}*/
-?>
+                // Construir la consulta SQL con la condición de búsqueda
+                $consulta_posts = "
+                SELECT p.id, p.imagen, detalles.nombre_objeto, detalles.fecha_publicacion, clas.nombre, detalles.id_ubicacion, detalles.id_clasificacion
+                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'ancient' AND etiquetas.id_post = p.id) as ancient,
+                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'lost' AND etiquetas.id_post = p.id) as lost,
+                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'found' AND etiquetas.id_post = p.id) as found,
+                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'gathered' AND etiquetas.id_post = p.id) as gathered
+                FROM posts p
+                INNER JOIN detallesposts detalles ON p.id_detallesPosts = detalles.id
+                INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id
+                WHERE detalles.id_clasificacion LIKE '%$filtrador%' or detalles.id_ubicacion LIKE '%$filtrador%';";
+
+                // Ejecutar la consulta y mostrar los resultados
+                $result_posts = mysqli_query($conn, $consulta_posts);
+                // ...
+                //
+            }
+            ?>
 <div class="cuerpo drop hideElement" id="filtro_cuerpo">
     <div class="Clasificación">
         <h1>Clasificación</h1>
         <div>
-            <input type="checkbox" name="Electronicos" class="check_Electronicos">
+            <input type="checkbox" name="Electronicos" class="check_Electronicos" name="filtrar">
             <label for="Electronicos">Electronicos</label>
             <br>
             <input type="checkbox" name="Ropa" class="Check_Ropa">

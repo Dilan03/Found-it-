@@ -33,6 +33,12 @@
                 <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
             </div>
         </div>
 
@@ -47,6 +53,12 @@
                 <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
             </div>
         </div>
 
@@ -57,6 +69,12 @@
                 <span class="circle"> <img src="assets/icons/flechaderecha.svg" alt="" class="fright"></span>
             </div>
             <div class="tarjetaSlider">
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
+                <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>

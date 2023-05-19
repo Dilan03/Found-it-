@@ -34,6 +34,7 @@
                 // Ejecutar la consulta y mostrar los resultados
                 $result_posts = mysqli_query($conn, $consulta_posts);
                 // ...
+                //
             }
             ?>
 <div class="search__container">
