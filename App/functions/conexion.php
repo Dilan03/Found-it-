@@ -2,8 +2,8 @@
 session_start();
 
 $serverName = "127.0.0.1:33065";
-$userName = "found_it";
-$password = "123";
+$userName = "root";
+$password = "";
 $dbName = "found_it";
 
 //crear conexion 

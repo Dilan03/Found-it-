@@ -1,27 +1,62 @@
 <button class="boton__filtro" id="filtro_btn"><img src="assets/icons/barras.svg"><span>Filtro</span></button>
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['filtrar'])) {
+    $clasificacion = isset($_POST['clasificacion']) ? $_POST['clasificacion'] : [];
+    $ubicacion = isset($_POST['ubicacion']) ? $_POST['ubicacion'] : [];
+
+    $clasificacion = array_map(function($value) use ($conn) {
+        return mysqli_real_escape_string($conn, $value);
+    }, $clasificacion);
+
+    $ubicacion = array_map(function($value) use ($conexion) {
+        return mysqli_real_escape_string($conexion, $value);
+    }, $ubicacion);
+
+    $clasificacion = implode("', '", $clasificacion);
+    $ubicacion = implode("', '", $ubicacion);
+
+    $consulta_posts = "
+	SELECT p.id, p.imagen, detalles.nombre_objeto, detalles.fecha_publicacion, clas.nombre,
+                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'ancient' AND etiquetas.id_post = p.id) as ancient,
+                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'lost' AND etiquetas.id_post = p.id) as lost,
+                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'found' AND etiquetas.id_post = p.id) as found,
+                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'gathered' AND etiquetas.id_post = p.id) as gathered
+                FROM posts p
+                INNER JOIN detallesposts detalles ON p.id_detallesPosts = detalles.id
+                INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id
+                WHERE clasificacion IN ('$clasificacion') AND ubicacion IN ('$ubicacion')";
+
+    $result_posts = mysqli_query($conn, $consulta_posts);
+
+}
+?>
+<form method="POST">
+    <button class="filtrarse" id="filtrar_btn" name="filtrar"><img src="assets/icons/barras.svg"><span></span></button>
+</form>
 <div class="cuerpo drop hideElement" id="filtro_cuerpo">
     <div class="Clasificación">
         <h1>Clasificación</h1>
         <div>
-            <input type="checkbox" name="Electronicos" class="check_Electronicos">
+            <input type="checkbox" name="clasificacion[]" value="Electronicos" class="check_Electronicos">
             <label for="Electronicos">Electronicos</label>
             <br>
-            <input type="checkbox" name="Ropa" class="Check_Ropa">
+            <input type="checkbox" name="clasificacion[]" value="Ropa" class="Check_Ropa">
             <label for="Ropa">Ropa</label>
             <br>
-            <input type="checkbox" name="Otros" class="Check_Otros">
+            <input type="checkbox" name="clasificacion[]" value="Otros" class="Check_Otros">
             <label for="Otros">Otros</label>
         </div>
     </div>
     <div class="Ubicación_1">
         <h1>Ubicación</h1>
-        <input type="checkbox" name="Ed. F" class="check_F">
+        <input type="checkbox" name="Ed. F" class="check_F" name="filtrar">
         <label for="Ed. F">Ed. F</label>
         <br>
-        <input type="checkbox" name="Ed. G" class="check_G">
+        <input type="checkbox" name="Ed. G" class="check_G" name="filtrar">
         <label for="Ed. G">Ed. G</label>
         <br>
-        <input type="checkbox" name="Biblioteca" class="check_Biblioteca">
+        <input type="checkbox" name="Biblioteca" class="check_Biblioteca" >
         <label for="Biblioteca">Biblioteca</label>
     </div>
     <div class="Ubicación_2">
