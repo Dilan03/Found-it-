@@ -11,6 +11,3 @@ INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id;
 ";
 
 $result_posts = mysqli_query($conn, $consulta_posts);
-// while($row_posts = mysqli_fetch_array($result_posts)) {
-//     var_dump($row_posts);
-// }

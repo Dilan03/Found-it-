@@ -3,13 +3,15 @@
     require 'functions/registrar.php';
     require 'functions/login.php';
     require 'functions/mostrar_posts.php';
+    
     if(!empty($_SESSION["id"])) {
         $id = $_SESSION["id"];
         $result = mysqli_query($conn, "SELECT * FROM usuarios WHERE no_control = '$id'");
         $row = mysqli_fetch_assoc($result);
-    } else {
-        
-    }
+    } 
+
+    //require 'functions/insertar_posts.php';
+
     ?>
 
 <?php include_once 'includes/header.php'?>
@@ -33,12 +35,6 @@
                 <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
             </div>
         </div>
 
@@ -53,12 +49,6 @@
                 <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
             </div>
         </div>
 
@@ -69,12 +59,6 @@
                 <span class="circle"> <img src="assets/icons/flechaderecha.svg" alt="" class="fright"></span>
             </div>
             <div class="tarjetaSlider">
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
-                <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>
                 <?php include 'includes/tarjeta_slider.php'?>
