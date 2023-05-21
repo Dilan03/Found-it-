@@ -1,34 +1,36 @@
 <button class="boton__filtro" id="filtro_btn"><img src="assets/icons/barras.svg"><span>Filtro</span></button>
 <?php
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['filtrar'])) {
+    // Obtener los valores de clasificación y ubicación del formulario
     $clasificacion = isset($_POST['clasificacion']) ? $_POST['clasificacion'] : [];
     $ubicacion = isset($_POST['ubicacion']) ? $_POST['ubicacion'] : [];
 
+    // Escapar los valores para prevenir inyección de SQL
     $clasificacion = array_map(function($value) use ($conn) {
         return mysqli_real_escape_string($conn, $value);
     }, $clasificacion);
 
-    $ubicacion = array_map(function($value) use ($conexion) {
-        return mysqli_real_escape_string($conexion, $value);
+    $ubicacion = array_map(function($value) use ($conn) {
+        return mysqli_real_escape_string($conn, $value);
     }, $ubicacion);
-
+    //WHERE detalles.id_ubicacion IN ('$ubicacion') OR detalles.id_clasificacion IN ('$clasificacion');";
+    // Convertir los valores en cadenas separadas por comas para usar en la consulta SQL
     $clasificacion = implode("', '", $clasificacion);
     $ubicacion = implode("', '", $ubicacion);
 
+    // Consulta SQL con filtros de clasificación y ubicación
     $consulta_posts = "
-	SELECT p.id, p.imagen, detalles.nombre_objeto, detalles.fecha_publicacion, clas.nombre,
-                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'ancient' AND etiquetas.id_post = p.id) as ancient,
-                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'lost' AND etiquetas.id_post = p.id) as lost,
-                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'found' AND etiquetas.id_post = p.id) as found,
-                (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'gathered' AND etiquetas.id_post = p.id) as gathered
-                FROM posts p
-                INNER JOIN detallesposts detalles ON p.id_detallesPosts = detalles.id
-                INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id
-                WHERE clasificacion IN ('$clasificacion') AND ubicacion IN ('$ubicacion')";
+        SELECT p.id, p.imagen, detalles.id_ubicacion, detalles.id_clasificacion, detalles.nombre_objeto, detalles.fecha_publicacion, clas.nombre,
+        (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'ancient' AND etiquetas.id_post = p.id) as ancient,
+        (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'lost' AND etiquetas.id_post = p.id) as lost,
+        (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'found' AND etiquetas.id_post = p.id) as found,
+        (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'gathered' AND etiquetas.id_post = p.id) as gathered
+        FROM posts p
+        INNER JOIN detallesposts detalles ON p.id_detallesPosts = detalles.id
+        INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id
+        WHERE detalles.id_ubicacion IN ('$ubicacion');";
 
     $result_posts = mysqli_query($conn, $consulta_posts);
-
 }
 ?>
 <form method="POST">
@@ -50,35 +52,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['filtrar'])) {
     </div>
     <div class="Ubicación_1">
         <h1>Ubicación</h1>
-        <input type="checkbox" name="Ed. F" class="check_F" name="filtrar">
+        <input type="checkbox" name="ubicacion[]" value="F" class="check_F">
         <label for="Ed. F">Ed. F</label>
         <br>
-        <input type="checkbox" name="Ed. G" class="check_G" name="filtrar">
+        <input type="checkbox" name="ubicacion[]" value="G" class="check_G">
         <label for="Ed. G">Ed. G</label>
         <br>
-        <input type="checkbox" name="Biblioteca" class="check_Biblioteca" >
+        <input type="checkbox" name="ubicacion[]" value="Biblioteca" class="check_Biblioteca">
         <label for="Biblioteca">Biblioteca</label>
     </div>
     <div class="Ubicación_2">
         <br><br><br><br>
-        <input type="checkbox" name="Ed. F" class="check_F">
+        <input type="checkbox" name="ubicacion[]" value="F" class="check_F">
         <label for="Ed. F">Ed. F</label>
         <br>
-        <input type="checkbox" name="Ed. G" class="check_G">
+        <input type="checkbox" name="ubicacion[]" value="G" class="check_G">
         <label for="Ed. G">Ed. G</label>
         <br>
-        <input type="checkbox" name="Gimnasio" class="check_GYM">
+        <input type="checkbox" name="ubicacion[]" value="Biblioteca" class="check_Biblioteca">
         <label for="Gimnasio">Gimnasio</label>
     </div>
     <div class="Ubicación_3">
         <br><br><br><br>
-        <input type="checkbox" name="Ed. D" class="check_D">
+        <input type="checkbox" name="ubicacion[]" value="D" class="check_D">
         <label for="Ed. D">Ed. D</label>
         <br>
-        <input type="checkbox" name="Ed. S" class="check_S">
+        <input type="checkbox" name="ubicacion[]" value="S" class="check_S">
         <label for="Ed. S">Ed. S</label>
         <br>
-        <input type="checkbox" name="Ed. A" class="check_A">
+        <input type="checkbox" name="ubicacion[]" value="A" class="check_A">
         <label for="Ed. A">Ed. A</label>
     </div>
     <div class="Ubicación_4">
