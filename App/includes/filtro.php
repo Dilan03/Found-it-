@@ -1,41 +1,4 @@
 <button class="boton__filtro" id="filtro_btn"><img src="assets/icons/barras.svg"><span>Filtro</span></button>
-<?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['filtrar'])) {
-    // Obtener los valores de clasificación y ubicación del formulario
-    $clasificacion = isset($_POST['clasificacion']) ? $_POST['clasificacion'] : [];
-    $ubicacion = isset($_POST['ubicacion']) ? $_POST['ubicacion'] : [];
-
-    // Escapar los valores para prevenir inyección de SQL
-    $clasificacion = array_map(function($value) use ($conn) {
-        return mysqli_real_escape_string($conn, $value);
-    }, $clasificacion);
-
-    $ubicacion = array_map(function($value) use ($conn) {
-        return mysqli_real_escape_string($conn, $value);
-    }, $ubicacion);
-    //WHERE detalles.id_ubicacion IN ('$ubicacion') OR detalles.id_clasificacion IN ('$clasificacion');";
-    // Convertir los valores en cadenas separadas por comas para usar en la consulta SQL
-    $clasificacion = implode("', '", $clasificacion);
-    $ubicacion = implode("', '", $ubicacion);
-
-    // Consulta SQL con filtros de clasificación y ubicación
-    $consulta_posts = "
-        SELECT p.id, p.imagen, detalles.id_ubicacion, detalles.id_clasificacion, detalles.nombre_objeto, detalles.fecha_publicacion, clas.nombre,
-        (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'ancient' AND etiquetas.id_post = p.id) as ancient,
-        (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'lost' AND etiquetas.id_post = p.id) as lost,
-        (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'found' AND etiquetas.id_post = p.id) as found,
-        (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'gathered' AND etiquetas.id_post = p.id) as gathered
-        FROM posts p
-        INNER JOIN detallesposts detalles ON p.id_detallesPosts = detalles.id
-        INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id
-        WHERE detalles.id_ubicacion IN ('$ubicacion');";
-
-    $result_posts = mysqli_query($conn, $consulta_posts);
-}
-?>
-<form method="POST">
-    <button class="filtrarse" id="filtrar_btn" name="filtrar"><img src="assets/icons/barras.svg"><span></span></button>
-</form>
 <div class="cuerpo drop hideElement" id="filtro_cuerpo">
     <div class="Clasificación">
         <h1>Clasificación</h1>
