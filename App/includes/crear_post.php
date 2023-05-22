@@ -2,7 +2,7 @@
     <h2 class="titulo-ventana"><b>Crear publicación</b></h2>
 
     <input type="file" id="myFile" name="imagen" required>
-    <label for="myFile" ><div class="fileimage"></div></label>
+    <label for="myFile" ><div class="fileimage" id="myFileArea"></div></label>
 
     <input type="textarea" class="tituloO" name="nombre_objeto" placeholder="Nombre del objeto" required>
 

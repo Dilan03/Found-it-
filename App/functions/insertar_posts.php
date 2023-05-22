@@ -12,6 +12,12 @@ if(isset($_POST["publicar"])) {
       $id_autor = $_GET['id_user'];
    }
 
+   $queryID = "SELECT id FROM posts ORDER BY id DESC LIMIT 1";
+   $resultadoConsulta = mysqli_query($conn, $queryID);
+   $datoID = mysqli_fetch_assoc($resultadoConsulta);
+
+   $id_post = $datoID['id'] +1;
+
    $nombre_objeto = $_POST["nombre_objeto"];
    $fecha = $_POST["fecha"];
    $estatus = $_POST["estatus"];
@@ -23,13 +29,13 @@ if(isset($_POST["publicar"])) {
    $imagen_name = $_FILES['imagen']['name'];
    $imagen = base64_encode(file_get_contents(addslashes($imagen)));
 
-   $querydetalles = "INSERT INTO detallesposts(id, nombre_objeto, descripcion, fecha_publicacion, id_ubicacion, id_clasificacion) values(5,'$nombre_objeto','$descripcion','$fecha', (SELECT id FROM ubicacion WHERE nombre = '$ubicacion'), (SELECT id FROM clasificacion WHERE nombre = '$categoria'))";
+   $querydetalles = "INSERT INTO detallesposts(id, nombre_objeto, descripcion, fecha_publicacion, id_ubicacion, id_clasificacion) values($id_post,'$nombre_objeto','$descripcion','$fecha', (SELECT id FROM ubicacion WHERE nombre = '$ubicacion'), (SELECT id FROM clasificacion WHERE nombre = '$categoria'))";
    mysqli_query($conn, $querydetalles);
 
-   $querypost = "INSERT INTO posts(id, imagen, id_autor, id_detallesPosts) values(5, '$imagen','$id_autor', 5)";
+   $querypost = "INSERT INTO posts(id, imagen, id_autor, id_detallesPosts) values($id_post, '$imagen','$id_autor', $id_post)";
    mysqli_query($conn, $querypost);
 
-   $queryetiquetas = "INSERT INTO etiquetas(nombre, id_post) values('$estatus',5)";
+   $queryetiquetas = "INSERT INTO etiquetas(nombre, id_post) values('$estatus',$id_post)";
    mysqli_query($conn, $queryetiquetas);
 }
 

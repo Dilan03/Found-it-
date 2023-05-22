@@ -1089,7 +1089,7 @@ button.login-button:hover {
 }
 
 input[type="file"] {
-    display: block;
+    display: none;
 }
 
 .tituloO:focus,
@@ -1439,6 +1439,10 @@ input[type="checkbox"]:checked {
     background: var(--morado-4);
     color: var(--blanco-);
     margin-left: 20px;
+}
+
+.fotocargada {
+    background-color: var(--morado-8);
 }
 
 /*HideElement*/
