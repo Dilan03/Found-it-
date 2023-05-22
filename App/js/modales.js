@@ -28,7 +28,7 @@ if (registro_btn) {
    });
 }
 
-if (login_btn || login_btn2) {
+if (login_btn) {
    login_btn.addEventListener('click', () => toggleModal(login_form));
 }
 
@@ -60,8 +60,18 @@ if (marcar_recuperado_btn) {
    marcar_recuperado_btn.addEventListener('click', () => toggleModal(marcar_recuperado_form));
 }
 
+const myFile = document.getElementById('myFile');
+const myFileArea = document.getElementById('myFileArea');
+
+if (myFile) {
+   myFile.addEventListener('change', () => {
+      myFileArea.classList.add('fotocargada');
+   });
+}
+
 window.addEventListener('click', (e) => {
    if (e.target.id == 'crear_post_form') {
+      myFileArea.classList.remove('fotocargada');
       toggleModal(crear_post_form);
    } else if (e.target.id == 'login_form') {
       toggleModal(login_form);
@@ -90,6 +100,7 @@ window.addEventListener('click', (e) => {
       e.preventDefault()
       const currentModal = document.getElementById(e.target.parentElement.parentElement.parentElement.id);
       toggleModal(currentModal);
+      myFileArea.classList.remove('fotocargada');
    }
 });
 
