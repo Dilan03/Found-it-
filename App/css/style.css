@@ -1,8 +1,6 @@
 .imagenes {
-    display: flex;
     width: 100%;
     height: 100%;
-    margin-left: -100%;
 }
 
 .flechasSlider {
@@ -880,7 +878,7 @@ button.login-button:hover {
 
 .desc2 {
     display: block;
-
+    height: 85px;
     top: 204px;
     left: 50px;
     text-align: justify;
@@ -900,7 +898,7 @@ button.login-button:hover {
 
 .cate {
     display: block;
-    margin: 25px 0;
+    margin: 15px 0;
     top: 345px;
     color: white;
     width: 105px;
@@ -924,7 +922,7 @@ button.login-button:hover {
 
 .edificio {
     display: block;
-    margin: 25px 0;
+    margin: 15px 0;
     color: white;
     width: 105px;
     height: 32px;
@@ -938,12 +936,9 @@ button.login-button:hover {
 
 .encontro {
     display: block;
-
-    top: 525px;
-    left: 50px;
     color: white;
     font-size: 16px;
-    line-height: 21px;
+    margin-top: 15px;
 }
 
 .alumno {
@@ -1223,7 +1218,7 @@ input[type="radio"]:active {
 
 .descripcion {
     box-sizing: border-box;
-
+    resize: none;
     position: absolute;
     width: 408.6px;
     height: 73.2px;
@@ -1444,6 +1439,10 @@ input[type="checkbox"]:checked {
     background: var(--morado-4);
     color: var(--blanco-);
     margin-left: 20px;
+}
+
+.fotocargada {
+    background-color: var(--morado-8);
 }
 
 /*HideElement*/
