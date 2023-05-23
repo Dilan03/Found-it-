@@ -13,7 +13,7 @@ if (isset($_POST['comentario'])) {
     $comentario = $_POST['comentario'];
 
         // Preparar la sentencia SQL para insertar el comentario en la base de datos
-        $sql = "INSERT INTO comentarios (contenido) VALUES ('$comentario')";
+        $sql = "INSERT INTO comentarios (contenido, fecha_publicacion) VALUES ('$comentario',NOW())";
 
         // Ejecutar la sentencia SQL
         if ($conn->query($sql) === TRUE) {
