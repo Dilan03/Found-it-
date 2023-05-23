@@ -1,12 +1,6 @@
 <?php
 // Configuración de la conexión a la base de datos
-$serverName = "127.0.0.1:33065";
-$userName = "found_it";
-$password = "123";
-$dbName = "found_it";
-
-// Crear una conexión
-$conn = new mysqli($servername, $username, $password, $dbname);
+require 'functions/conexion.php';
 
 // Verificar la conexión
 if ($conn->connect_error) {
@@ -37,7 +31,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Generar el HTML para mostrar los comentarios
     while ($row = $result->fetch_assoc()) {
-        echo "<div class='comentario'>" . $row["contenido"] . "</div>";
+        echo "<div class='comentarios'>" . $row["contenido"] . "</div>";
     }
 } else {
     echo "No hay comentarios.";

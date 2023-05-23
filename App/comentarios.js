@@ -1,6 +1,6 @@
 function mostrarComentarios() {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'functions/comentarios.php', true);
+    xhr.open('GET', 'comentarios.php', true);
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             document.getElementById('comentarios').innerHTML = xhr.responseText;
@@ -19,7 +19,7 @@ function publicarComentario() {
     // Verificar si el usuario está registrado antes de permitir publicar
     if (usuarioRegistrado()) {
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'functions/comentarios.php', true);
+        xhr.open('POST', 'comentarios.php', true);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
