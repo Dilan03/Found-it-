@@ -3,6 +3,7 @@
     require 'functions/registrar.php';
     require 'functions/login.php';
     require 'functions/mostrar_posts.php';
+    require 'functions/filtrar.php';
     if(!empty($_SESSION["id"])) {
         $id = $_SESSION["id"];
         $result = mysqli_query($conn, "SELECT * FROM usuarios WHERE no_control = '$id'");
