@@ -38,26 +38,20 @@
             }
             ?>
 <div class="search__container">
-    <form class="search__form" method="POST">
-        <button class="button__search" type="submit"> <i> <img src="assets/icons/search.svg"> </i> </button>
-        <input type="text" placeholder="Buscar..." name="buscador">
-    </form>
+<?php
+    $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    ?>
+    <?php if (str_contains($actual_link, 'index')) { ?>
+        <div>
+            <h2 class="gallery__titulo">Found it</h2>
+        </div>
+    <?php } else {?>
+        <form class="search__form" method="POST">
+            <button class="button__search" type="submit"> <i> <img src="assets/icons/search.svg"> </i> </button>
+            <input type="text" placeholder="Buscar..." name="buscador">
+        </form>
+    <?php } ?>
 </div>
-            <div class="search__container">
-                <?php
-                $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                ?>
-                <?php if (str_contains($actual_link, 'index')) { ?>
-                    <div>
-                        <h2 class="gallery__titulo">Found it</h2>
-                    </div>
-                <?php } else {?>
-                    <form class="search__form">
-                        <button class="button__search" type="submit"> <i> <img src="assets/icons/search.svg"> </i> </button>
-                        <input type="text" placeholder="Buscar...">
-                    </form>
-                <?php } ?>
-            </div>
             <div class="header__options">
                 <?php if(!empty($_SESSION["id"])) { ?>
                     <div class="options__logeduser">

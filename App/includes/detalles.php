@@ -72,10 +72,28 @@
 
             <div class="seccionBtn">
                 <p class="pre">¿Es tuyo?</p>
-                <button class="rectangulo4">
+                <button class="rectangulo4" onclick="redirectToWhatsApp()">
                     <span>Enviar mensaje</span> 
                     <img src="assets/icons/wasap.svg" alt="" class="was">
                 </button>
+                <script>
+        function redirectToWhatsApp() {
+            var phoneNumber = "<?php echo $row_detalle['telefono']; ?>";
+            var url = "https://wa.me/" + phoneNumber;
+
+            window.open(url, "_blank");
+        }
+    </script>
+                <?php
+                    function conseguirnumeroBD() {
+                        // Configurar la conexión a la base de datos
+                        $servername = "127.0.0.1:33065";
+                        $username = "found_it";
+                        $password = "123";
+                        $dbname = "found_it";
+                        $telefono = $row_detalle['telefono']; // Obtener el número de teléfono desde la variable $row_detalle
+                    }
+                ?>
             </div>
         </section>
     </div>
