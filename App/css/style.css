@@ -1089,7 +1089,7 @@ button.login-button:hover {
 }
 
 input[type="file"] {
-    display: none;
+    display: block;
 }
 
 .tituloO:focus,
