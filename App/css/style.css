@@ -1441,6 +1441,10 @@ input[type="checkbox"]:checked {
     margin-left: 20px;
 }
 
+.fotocargada {
+    background-color: var(--morado-8);
+}
+
 /*HideElement*/
 
 .hideElement {
