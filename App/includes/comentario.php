@@ -19,7 +19,6 @@
             echo 'efsf';
         } else {
             die(mysql_error());
-
         }
     // if($query) { 
     //     echo "<script> alert('El comentario se ingreso')</script>";
