@@ -18,7 +18,7 @@ $result_posts = mysqli_query($conn, $consulta_posts);
 
 $postsL = array(); // Array para almacenar los posts
 
-while ($row = mysqli_fetch_assoc($result_posts)) {
-    $postsL[] = $row; // Agregar cada fila al array de posts
+while ($fila_reciente = mysqli_fetch_assoc($result_posts)) {
+    $postsL[] = $fila_reciente; // Agregar cada fila al array de posts
 }
 ?>

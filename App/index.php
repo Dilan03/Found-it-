@@ -37,7 +37,7 @@ if (!empty($_SESSION["id"])) {
                 <?php endif; ?>
             </div>
             <div class="tarjeta__image">
-                <img src="assets/images/<?php echo $postF['imagen']; ?>" alt="">
+                <img src="data:image/jpeg;base64,<?php echo $postF['imagen']; ?>" alt="">
             </div>
             <div class="tarjeta__detalles">
                 <h4 class="tarjeta__nombre"><?php echo $postF['nombre_objeto']; ?></h4>
@@ -70,7 +70,7 @@ if (!empty($_SESSION["id"])) {
                 <?php endif; ?>
             </div>
             <div class="tarjeta__image">
-                <img src="assets/images/<?php echo $postL['imagen']; ?>" alt="">
+                <img src="data:image/jpeg;base64,<?php echo $postL['imagen']; ?>" alt="">
             </div>
             <div class="tarjeta__detalles">
                 <h4 class="tarjeta__nombre"><?php echo $postL['nombre_objeto']; ?></h4>
@@ -103,7 +103,7 @@ if (!empty($_SESSION["id"])) {
                 <?php endif; ?>
             </div>
             <div class="tarjeta__image">
-                <img src="assets/images/<?php echo $postG['imagen']; ?>" alt="">
+                <img src="data:image/jpeg;base64,<?php echo $postG['imagen']; ?>" alt="">
             </div>
             <div class="tarjeta__detalles">
                 <h4 class="tarjeta__nombre"><?php echo $postG['nombre_objeto']; ?></h4>
