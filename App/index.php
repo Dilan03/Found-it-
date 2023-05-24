@@ -27,7 +27,6 @@ if (!empty($_SESSION["id"])) {
             <span class="circle"> <img src="assets/icons/flechaderecha.svg" alt="" class="fright"></span>
         </div>
         <div class="tarjetaSlider">
-    <?php include_once 'functions/conexion.php'; ?>
     <?php include_once 'functions/mostrar_encontrado_reciente.php'; ?>
     <?php foreach ($postsF as $postF) : ?>
         <div class="tarjeta slider-wh">
@@ -43,7 +42,7 @@ if (!empty($_SESSION["id"])) {
                 <h4 class="tarjeta__nombre"><?php echo $postF['nombre_objeto']; ?></h4>
                 <span>
                     <p class="etiquetaCAT"><?php echo $postF['nombre']; ?></p>
-                    <button class="boton boton__tarjeta"><a href="detail.php">Informacion</a></button>
+                    <button class="boton boton__tarjeta"><a href="detailobject.php">Informacion</a></button>
                 </span>
                 <span class="tarjeta__fecha">Encontrado: <?php echo $postF['fecha_publicacion']; ?></span>
             </div>
@@ -60,7 +59,6 @@ if (!empty($_SESSION["id"])) {
             <span class="circle"> <img src="assets/icons/flechaderecha.svg" alt="" class="fright"></span>
         </div>
         <div class="tarjetaSlider">
-    <?php include_once 'functions/conexion.php'; ?>
     <?php include_once 'functions/mostrar_perdido_reciente.php'; ?>
     <?php foreach ($postsL as $postL) : ?>
         <div class="tarjeta slider-wh">
@@ -76,7 +74,7 @@ if (!empty($_SESSION["id"])) {
                 <h4 class="tarjeta__nombre"><?php echo $postL['nombre_objeto']; ?></h4>
                 <span>
                     <p class="etiquetaCAT"><?php echo $postL['nombre']; ?></p>
-                    <button class="boton boton__tarjeta"><a href="detail.php">Informacion</a></button>
+                    <button class="boton boton__tarjeta"><a href="detailobject.php">Informacion</a></button>
                 </span>
                 <span class="tarjeta__fecha">Perdido: <?php echo $postL['fecha_publicacion']; ?></span>
             </div>
@@ -93,13 +91,12 @@ if (!empty($_SESSION["id"])) {
             <span class="circle"> <img src="assets/icons/flechaderecha.svg" alt="" class="fright"></span>
         </div>
         <div class="tarjetaSlider">
-    <?php include_once 'functions/conexion.php'; ?>
     <?php include_once 'functions/mostrar_recuperado_reciente.php'; ?>
     <?php foreach ($postsG as $postG) : ?>
         <div class="tarjeta slider-wh">
             <div class="tarjeta__etiquetas">
-                <?php if ($postG['Gathered']) : ?>
-                    <div class="etiquetaEST etiquetaEST--Gathered"><span>#Gathered</span></div>
+                <?php if ($postG['gathered']) : ?>
+                    <div class="etiquetaEST etiquetaEST--gathered"><span>#Gathered</span></div>
                 <?php endif; ?>
             </div>
             <div class="tarjeta__image">
@@ -109,7 +106,7 @@ if (!empty($_SESSION["id"])) {
                 <h4 class="tarjeta__nombre"><?php echo $postG['nombre_objeto']; ?></h4>
                 <span>
                     <p class="etiquetaCAT"><?php echo $postG['nombre']; ?></p>
-                    <button class="boton boton__tarjeta"><a href="detail.php">Informacion</a></button>
+                    <button class="boton boton__tarjeta"><a href="detailobject.php">Informacion</a></button>
                 </span>
                 <span class="tarjeta__fecha">Recuperado: <?php echo $postG['fecha_publicacion']; ?></span>
             </div>

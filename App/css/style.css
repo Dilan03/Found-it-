@@ -517,7 +517,7 @@ footer {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: normal;
     width: 135%;
     height: 558px;
     margin-bottom: 60px;
