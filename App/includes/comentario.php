@@ -12,9 +12,9 @@
 
     if(isset($_POST["enviar"])) {   
         
-        //$comentario = $_POST['comenta'];
+        $comentario = $_POST['comenta']
         //$query = "INSERT INTO comentarios(id, id_autor, contenido, fecha_publicacion, id_post) values(1, '21550135', 'hhj', '2023-06-02 00:00:0', 0)";
-        mysqli_query($conn, "INSERT INTO comentarios(id_autor, contenido, fecha_publicacion, id_post) values('21550135', 'hola', '2023-06-02 00:00:0', 0)"); 
+        mysqli_query($conn, "INSERT INTO comentarios(id_autor, contenido, fecha_publicacion, id_post) values('21550135', '', '2023-06-02 00:00:0', 0)"); 
         if($result) {
             echo 'efsf';
         } else {
