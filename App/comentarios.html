@@ -5,9 +5,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="comentarios">
-        <!-- Aquí se mostrarán los comentarios -->
-    </div>
+    <h3>Deja un comentario</h3>
     <div class= "comentar" id="formulario-comentario">
         <img class="options__user hideElement" src="assets/icons/user-box.svg">
             
@@ -17,7 +15,21 @@
         <textarea id="texto-comentario" cols="100" rows="10" placeholder="Escribe tu comentario" class="comentario__caja"></textarea>
         <button id="boton-publicar" onclick="publicarComentario()">Comentar</button>
     </div>
-    <h3>Deja un comentario</h3>
+    
+    <div class="user_1">
+        <img class="options__user hideElement" src="assets/icons/user-box.svg">
+        <span>
+            <div class="profilepic">
+                <img src="assets/images/perroperfil.png" alt="profilepic">
+            </div>
+        </span>
+        <div>
+            <label class="comentario__usuario" for="usuario_1">Esteban Cote<i class="borrar_comentario_btn"><img class="detalles_opt" src="assets/icons/bote-basura.svg"></i></label><br>
+
+            <p class="comentario__text" id="comentarios">
+            </p>
+        </div>
+    </div>
     <script src="comentarios.js"></script>
 </body>
 </html>

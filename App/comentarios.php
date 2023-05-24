@@ -1,6 +1,7 @@
 <?php
 // Configuración de la conexión a la base de datos
 require 'functions/conexion.php';
+require 'functions/registrar.php';
 
 // Verificar la conexión
 if ($conn->connect_error) {
@@ -13,7 +14,7 @@ if (isset($_POST['comentario'])) {
     $comentario = $_POST['comentario'];
 
         // Preparar la sentencia SQL para insertar el comentario en la base de datos
-        $sql = "INSERT INTO comentarios (contenido, fecha_publicacion) VALUES ('$comentario',NOW())";
+        $sql = "INSERT INTO comentarios (id_autor, contenido, fecha_publicacion, id_post) VALUES ('$no_control','$comentario',NOW(),'$id')";
 
         // Ejecutar la sentencia SQL
         if ($conn->query($sql) === TRUE) {

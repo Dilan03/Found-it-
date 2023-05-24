@@ -21,11 +21,6 @@
             <?php include 'includes/detalles.php'?>
             <?php require 'C:\xampp\htdocs\Found-it-\App\comentarios.html'?>
                 </form>
-                <?php include 'includes/comentario.php'?>
-                <?php include 'includes/comentario.php'?>
-                <?php include 'includes/comentario.php'?>
-                <?php include 'includes/comentario.php'?>
-            
             </div>
         </section>
     </div>
