@@ -1,6 +1,6 @@
 <?php
 // Obtener la fecha máxima hace una semana
-$fechaMaxima = date('Y-m-d', strtotime('-1 week'));
+$fechaMaxima = date('Y-m-d', strtotime('-5 week'));
 
 // Consulta para obtener los posts más recientes
 $consulta_posts = "
