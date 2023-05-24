@@ -623,6 +623,10 @@ footer {
     .options__desplegable-llave {
         left: 900px;
     }
+
+    .tarjeta__fecha {
+        font-size: 20px;
+    }
 }
 
 /* ELIAS */

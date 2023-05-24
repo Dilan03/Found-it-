@@ -44,7 +44,7 @@ if (!empty($_SESSION["id"])) {
                     <p class="etiquetaCAT"><?php echo $postF['nombre']; ?></p>
                     <button class="boton boton__tarjeta"><a href="<?php echo 'detailobject.php?id='.$postF['id']?>">Informacion</a></button>
                 </span>
-                <span class="tarjeta__fecha">Encontrado: <?php echo $postF['fecha_publicacion']; ?></span>
+                <span class="tarjeta__fecha">Encontrado: <?php echo (substr($postF['fecha_publicacion'], 0,10))?></span>
             </div>
         </div>
     <?php endforeach; ?>
@@ -76,7 +76,7 @@ if (!empty($_SESSION["id"])) {
                     <p class="etiquetaCAT"><?php echo $postL['nombre']; ?></p>
                     <button class="boton boton__tarjeta"><a href="<?php echo 'detailobject.php?id='.$postL['id']?>">Informacion</a></button>
                 </span>
-                <span class="tarjeta__fecha">Perdido: <?php echo $postL['fecha_publicacion']; ?></span>
+                <span class="tarjeta__fecha">Perdido: <?php echo (substr($postL['fecha_publicacion'], 0,10))?></span>
             </div>
         </div>
     <?php endforeach; ?>
@@ -108,7 +108,7 @@ if (!empty($_SESSION["id"])) {
                     <p class="etiquetaCAT"><?php echo $postG['nombre']; ?></p>
                     <button class="boton boton__tarjeta"><a href="<?php echo 'detailobject.php?id='.$postG['id']?>">Informacion</a></button>
                 </span>
-                <span class="tarjeta__fecha">Recuperado: <?php echo $postG['fecha_publicacion']; ?></span>
+                <span class="tarjeta__fecha">Recuperado: <?php echo (substr($postG['fecha_publicacion'], 0,10)) ?></span>
             </div>
         </div>
     <?php endforeach; ?>
