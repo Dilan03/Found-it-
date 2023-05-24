@@ -2,7 +2,8 @@
     require 'functions/conexion.php';
     require 'functions/registrar.php';
     require 'functions/login.php';
-
+    require 'functions/mostrar_posts.php';
+    require 'functions/filtrar.php';
     if(!empty($_SESSION["id"])) {
         $id = $_SESSION["id"];
         $result = mysqli_query($conn, "SELECT * FROM usuarios WHERE no_control = '$id'");
@@ -21,14 +22,13 @@
             <?php include 'includes/filtro.php'?>
         </div>
 
-        <?php include 'includes/tarjeta_gal.php'?>
-        <?php include 'includes/tarjeta_gal.php'?>
-        <?php include 'includes/tarjeta_gal.php'?>
-        <?php include 'includes/tarjeta_gal.php'?>
-        <?php include 'includes/tarjeta_gal.php'?>
-        <?php include 'includes/tarjeta_gal.php'?>
-        <?php include 'includes/tarjeta_gal.php'?>
-        <?php include 'includes/tarjeta_gal.php'?>
+        <?php
+            while($row_posts = mysqli_fetch_array($result_posts)) {
+                if (($row_posts['lost']) == 'lost') {
+                    include 'includes/tarjeta_gal.php';
+                }
+            }
+        ?>        
         
     </section>
 </div><!-- div cierre container -->

@@ -1,18 +1,31 @@
-<div class="tarjeta">
-    <div class="tarjeta__etiquetas">
-        <div class="etiquetaEST etiquetaEST--ancient"><span>#Ancient</span></div>
-        <div class="etiquetaEST etiquetaEST--lost"><span>#Lost</span></div>
-        <!-- <div class="etiquetaEST etiquetaEST--gathered"><span>#Gathered</span></div> -->
-    </div>
-    <div class="tarjeta__image">
-        <img src="assets/images/test.jpg" alt="">
-    </div>
-    <div class="tarjeta__detalles">
-        <h4 class="tarjeta__nombre">Objeto 1</h4>
-        <span>
-            <p class="etiquetaCAT">electronicos</p>
-            <button class="boton boton__tarjeta"><a href="detailobject.php">Informacion</a></button>
-        </span>
-        <span class="tarjeta__fecha">Perdido: 22/02/2023</span>
-    </div>
-</div>
+<?php
+    $estado;
+    if($row_posts['found'] == 'found') $estado = 'Encontrado';
+    elseif ($row_posts['lost'] == 'lost') $estado = 'Perdido';
+    echo '<div class="tarjeta">
+        <div class="tarjeta__etiquetas">';
+        if (($row_posts['ancient']) == 'ancient') {
+            echo '<div class="etiquetaEST etiquetaEST--ancient"><span>#Ancient</span></div>';
+        }
+        if (($row_posts['found']) == 'found') {
+            echo '<div class="etiquetaEST etiquetaEST--found"><span>#found</span></div>';
+        }
+        if (($row_posts['lost']) == 'lost') {
+            echo '<div class="etiquetaEST etiquetaEST--lost"><span>#Lost</span></div>';
+        }
+        if (($row_posts['gathered']) == 'gathered') {
+            echo '<div class="etiquetaEST etiquetaEST--gathered"><span>#Gathered</span></div>';
+        }
+    echo '</div>
+       <div class="tarjeta__image">
+           <img src=data:image;base64,'.$row_posts['imagen'].' alt="imagen_objeto"/>
+       </div>
+       <div class="tarjeta__detalles">
+           <h4 class="tarjeta__nombre">'.($row_posts['nombre_objeto']).'</h4>
+           <span>
+               <p class="etiquetaCAT">'.($row_posts['nombre']).'</p>
+               <button class="boton boton__tarjeta"><a href="detailobject.php?id='.$row_posts['id'].'">Informacion</a></button>
+           </span>
+           <span class="tarjeta__fecha">'.$estado.': '.(substr($row_posts['fecha_publicacion'], 0,10)).'</span>
+       </div>
+   </div>';

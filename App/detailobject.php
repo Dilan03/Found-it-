@@ -2,14 +2,13 @@
     require 'functions/conexion.php';
     require 'functions/registrar.php';
     require 'functions/login.php';
-
     if(!empty($_SESSION["id"])) {
         $id = $_SESSION["id"];
         $result = mysqli_query($conn, "SELECT * FROM usuarios WHERE no_control = '$id'");
         $row = mysqli_fetch_assoc($result);
-    } else {
+    } 
 
-    }
+    require 'functions/detalle.php';
 ?>
 
 <?php include_once 'includes/header.php'?>
