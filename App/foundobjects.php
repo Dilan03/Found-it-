@@ -24,7 +24,7 @@
 
         <?php
             while($row_posts = mysqli_fetch_array($result_posts)) {
-                if (($row_posts['found']) == 'found') {
+                if (($row_posts['ancient']) == 'ancient') {
                     include 'includes/tarjeta_gal.php';
                 }
             }
