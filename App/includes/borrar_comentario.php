@@ -1,3 +1,18 @@
+<?php
+if(isset($_POST["Confirmar"])) {   
+        
+    $id_0 = $_POST['id'];
+    //$query = "INSERT INTO comentarios(id, id_autor, contenido, fecha_publicacion, id_post) values(1, '21550135', 'hhj', '2023-06-02 00:00:0', 0)";
+    mysqli_query($conn, "DELETE FROM comentarios WHERE id = 7"); 
+    if($result) {
+        echo 'efsf';
+    } else {
+        die(mysql_error());
+
+    }
+}
+?>
+
 <form class="login-form eliminar_post movLR">
     <h2 class="login-titulo">Borrar comentario</h2>
     
