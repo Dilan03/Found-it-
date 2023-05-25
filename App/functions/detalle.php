@@ -3,7 +3,7 @@ if(isset($_GET['id'])) {
    $post_id = $_GET['id'];
 
    $consulta_detalle = "
-   SELECT p.id, p.imagen, d.nombre_objeto, d.fecha_publicacion, d.descripcion, c.nombre as cat, u.nombre, u.apellido, u.telefono, ca.nombre as carrera, ub.nombre as ubicacion,
+   SELECT p.id, p.id_autor, p.imagen, d.nombre_objeto, d.fecha_publicacion, d.descripcion, c.nombre as cat, u.nombre, u.apellido, u.telefono, ca.nombre as carrera, ub.nombre as ubicacion,
    (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'ancient' AND etiquetas.id_post = p.id) as ancient,
    (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'lost' AND etiquetas.id_post = p.id) as lost,
    (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'found' AND etiquetas.id_post = p.id) as found,
