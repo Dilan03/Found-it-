@@ -2,6 +2,9 @@
     $estado;
     if($row_posts['found'] == 'found') $estado = 'Encontrado';
     elseif ($row_posts['lost'] == 'lost') $estado = 'Perdido';
+
+    require 'functions/agregarAncient.php';
+
     echo '<div class="tarjeta">
         <div class="tarjeta__etiquetas">';
         if (($row_posts['ancient']) == 'ancient') {

@@ -20,19 +20,22 @@
             <?php include 'includes/detalles.php'?>
 
             <div class="SeccionComentarios">
-                <div class="comentar">
-                    <img class="options__user hideElement" src="assets/icons/user-box.svg">
-            
-                    <div class="profilepic">
-                        <img src="assets/images/perroperfil.png" alt="profilepic">
+                <?php if(!empty($_SESSION["id"])) { ?>
+                <form method="POST" action=<?php echo "functions/comentar.php?id_autor=".$row['no_control']."&id_post=".$row_detalle['id']?> enctype="multipart/form-data">
+                    <div class="comentar">
+                        <img class="options__user hideElement" src="assets/icons/user-box.svg">
+                
+                        <div class="profilepic">
+                            <?php
+                                echo '<img src=data:image;base64,'.$row['foto'].' alt="profilepic"/>'
+                            ?>
+                        </div>
+                        <textarea name="comentario" cols="100" rows="10" placeholder="Añadir un comentario" class="comentario__caja" required></textarea>
+    
                     </div>
-                    <textarea name="comenta" cols="100" rows="10" placeholder="Añadir un comentario" class="comentario__caja"></textarea>
-
-                </div>
-
-                <?php include 'includes/comentario.php'?>
-                <?php include 'includes/comentario.php'?>
-                <?php include 'includes/comentario.php'?>
+                    <button type="submit" name="comentar">Comentar</button>
+                </form>
+                <?php } ?>
                 <?php include 'includes/comentario.php'?>
             
             </div>
