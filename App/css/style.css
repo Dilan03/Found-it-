@@ -1,3 +1,21 @@
+.comentar_btn {
+    position: relative;
+    background-color: var(--morado-3);
+    padding: 7px;
+    border-radius: 10px;
+    left: 956px;
+    top: -40px;
+}
+
+.filtrar__btn {
+    position: relative;
+    background-color: var(--morado-3);
+    padding: 7px;
+    border-radius: 10px;
+    left: 146px;
+    top: -22px;
+}
+
 .imagenes {
     width: 100%;
     height: 100%;
@@ -813,7 +831,7 @@ button.login-button:hover {
 .rectangulo1 {
     position: relative;
     width: calc(70% - 80px);
-    height: calc(777px - 80px);
+    height: calc(735px - 80px);
     background: #181B35;
     border-radius: 8px;
     margin-right: 20px;
@@ -834,9 +852,8 @@ button.login-button:hover {
     color: white;
     width: 100px;
     left: 50px;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 41px;
+    font-size: 22px;
+    line-height: 40px;
     margin-top: 0;
 }
 
@@ -851,9 +868,8 @@ button.login-button:hover {
 
 .diaencontrado {
     display: block;
-
     width: 100%;
-    height: 55px;
+    height: 25px;
     left: 50px;
     top: 115px;
     color: rgba(255, 255, 255, 0.6);
@@ -1093,7 +1109,7 @@ button.login-button:hover {
 }
 
 input[type="file"] {
-    display: block;
+    display: none;
 }
 
 .tituloO:focus,
@@ -1416,7 +1432,6 @@ input[type="checkbox"]:checked {
     padding-left: 20px;
 }
 
-
 .comentar {
     display: flex;
     align-self: center;
@@ -1436,8 +1451,7 @@ input[type="checkbox"]:checked {
 .comentario__caja {
     resize: none;
     padding: 20px;
-    height: 80px;
-    height: 111px;
+    height: 70px;
     width: 89.5%;
     border-radius: var(--border-8);
     background: var(--morado-4);
