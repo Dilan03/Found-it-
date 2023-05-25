@@ -11,7 +11,7 @@ $consulta_posts = "
     INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id
     INNER JOIN etiquetas ON p.id = etiquetas.id_post
     WHERE etiquetas.nombre = 'gathered' AND detalles.fecha_publicacion >= '$fechaMaxima'
-    ORDER BY detalles.fecha_publicacion DESC
+    ORDER BY detalles.fecha_publicacion DESC LIMIT 4
 ";
 
 $result_posts = mysqli_query($conn, $consulta_posts);
