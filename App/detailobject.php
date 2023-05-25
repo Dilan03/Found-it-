@@ -15,7 +15,7 @@
 <?php include_once 'includes/nav.php'?>
 
         <section class="main">
-            <h1 class="gallery__titulo">Detalle Objeto perdido</h1>
+            <h1 class="gallery__titulo">Detalle Del Objeto</h1>
             
             <?php include 'includes/detalles.php'?>
 

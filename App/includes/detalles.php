@@ -20,21 +20,23 @@
                     if (($row_detalle['gathered']) == 'gathered') {
                         echo '<div class="etiquetaEST etiquetaEST--gathered"><span>#Gathered</span></div>';
                     }
-                echo '</div>'; 
-            ?>
+                    echo '</div>'; 
+                    ?>
     </div>
     <div class="rectangulo3">
         <section>
-            <i id="options_desplegable_llave_btn"><img class="detalles_opt" src="assets/icons/llave.svg"></i>
-            <div class="options__desplegable-llave hideElement" id="options_desplegable_llave">
-                <a href="#" id="eliminar_post_btn">Eliminar</a>
-                <a href="#" id="editar_post_btn">Editar</a>
-                <a href="#" id="marcar_recuperado_btn">Recuperado</a>
-            </div>
-
-
-            <h2 class="titulo">
-                <?php echo $row_detalle['nombre_objeto']?>
+            <?php if((!empty($_SESSION["id"]) && ($row_detalle["id_autor"] == $_SESSION["id"]))  || $row["id_rol"] == 1) { ?>
+                <i id="options_desplegable_llave_btn"><img class="detalles_opt" src="assets/icons/llave.svg"></i>
+                <div class="options__desplegable-llave hideElement" id="options_desplegable_llave">
+                    <a href="#" id="eliminar_post_btn">Eliminar</a>
+                    <a href="#" id="editar_post_btn">Editar</a>
+                    <a href="#" id="marcar_recuperado_btn">Recuperado</a>
+                </div>
+                <?php } else { ?>
+                        <?php } ?>
+                        
+                        <h2 class="titulo">
+                            <?php echo $row_detalle['nombre_objeto']?>
             </h2>
             <label for="encontrado" class="diaencontrado">
                 <?php
