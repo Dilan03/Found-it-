@@ -21,17 +21,13 @@ if (isset($_POST["filtrar"])) {
         $op1 = " clas.nombre = '".$_POST["Ropa"]."' ";
         array_push($condiciones, $op1);
 
-    } else {
-        $op1 = "";    
     }
 
     if(isset($_POST["Electronicos"])) {
         $filatrados++;
         $op2 = " clas.nombre = '".$_POST["Electronicos"]."' ";
         array_push($condiciones, $op2);
-    } else {
-        $op2 = "";    
-    }
+    } 
 
     $condicionesLenght = sizeof($condiciones);
     
@@ -43,7 +39,7 @@ if (isset($_POST["filtrar"])) {
                 $consulta_filtrada .= $condiciones[$i]." OR";
             }
         }
-    } else {
+    } elseif($condicionesLenght == 1 ) {
         $consulta_filtrada .= $condiciones[0];
     }
 
@@ -53,7 +49,7 @@ if (isset($_POST["filtrar"])) {
 if($filatrados > 0) {
     $consulta_posts = $consulta_filtrada;
 
-} elseif($filatrados == 0) {
+} else {
     $consulta_posts = "
     SELECT p.id, p.imagen, detalles.nombre_objeto, detalles.fecha_publicacion, clas.nombre,
     (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'ancient' AND etiquetas.id_post = p.id) as ancient,

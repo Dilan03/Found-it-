@@ -9,5 +9,3 @@ FROM posts p
 INNER JOIN detallesposts detalles ON p.id_detallesPosts = detalles.id
 INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id;
 ";
-
-//$result_posts = mysqli_query($conn, $consulta_posts);
