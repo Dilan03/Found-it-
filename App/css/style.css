@@ -517,7 +517,7 @@ footer {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: normal;
     width: 135%;
     height: 558px;
     margin-bottom: 60px;
@@ -527,7 +527,7 @@ footer {
 }
 
 .slider-wh {
-    width: 370px;
+    width: 297px;
     margin-right: 19px;
 }
 
@@ -622,6 +622,10 @@ footer {
 
     .options__desplegable-llave {
         left: 900px;
+    }
+
+    .tarjeta__fecha {
+        font-size: 20px;
     }
 }
 
