@@ -1,18 +1,23 @@
 <?php
-$date = date('Y-m-d');
+$serverName = "127.0.0.1:33065";
+$userName = "found_it";
+$password = "123";
+$dbName = "found_it";
 
-$hoy = new DateTime($date);
-$fecha_publicacion = new DateTime(substr($row_posts['fecha_publicacion'], 0,10));
-$diferencia_dias = $hoy->diff($fecha_publicacion);    
+$conn = mysqli_connect($serverName, $userName, $password, $dbName);
 
-if($diferencia_dias->days > 8) {
-   $id_post = $row_posts['id'];
-   $existeFound = mysqli_query($conn,"SELECT * FROM `etiquetas` WHERE id_post = $id_post AND nombre = 'found'");
+if(isset($_GET['id'])) {
+    $id_post = $_GET['id'];
+ }
 
-   if((mysqli_num_rows($existeFound) > 0)) {
+if(isset($_POST['recuperado'])){
+    $queryfound = "INSERT INTO etiquetas (nombre, id_post) values ('found', $id_post)";
+    mysqli_query($conn, $queryfound);
+    if($queryfound) {
+        echo 'insertado';
+    } else {
+        die(mysql_error());
 
-   } else {
-         $queryetiquetas = "INSERT INTO etiquetas(nombre, id_post) values('found',$id_post)";
-         mysqli_query($conn, $queryetiquetas);
-   }
+    }
+    header("Location: ../index.php");
 }
