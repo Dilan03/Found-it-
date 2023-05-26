@@ -1111,7 +1111,7 @@ button.login-button:hover {
 }
 
 input[type="file"] {
-    display: block;
+    display: none;
 }
 
 .tituloO:focus,
