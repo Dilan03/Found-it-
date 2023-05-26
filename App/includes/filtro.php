@@ -1,5 +1,5 @@
-<button class="boton__filtro" id="filtro_btn"><img src="assets/icons/barras.svg"><span>Filtro</span></button>
 
+<button class="boton__filtro" id="filtro_btn"><img src="assets/icons/barras.svg"><span>Filtro</span></button>
 <form method="POST">
     <button type="submit" class="filtrarse" id="filtrar_btn" name="filtrar"><span class="filtrar__btn">Aplicar</span></button> 
     <div class="cuerpo drop hideElement" id="filtro_cuerpo">

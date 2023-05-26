@@ -32,13 +32,12 @@
                     <a href="#" id="editar_post_btn">Editar</a>
                     <a href="#" id="marcar_recuperado_btn">Recuperado</a>
                 </div>
-            <?php } else { ?>
-                    
-            <?php }} ?>
+                <?php } else { ?>
+                <?php } }?>
                         
-            <h2 class="titulo">
-                <?php echo $row_detalle['nombre_objeto']?>
-            </h2>
+                <h2 class="titulo">
+                    <?php echo $row_detalle['nombre_objeto']?>
+                </h2>
             <label for="encontrado" class="diaencontrado">
                 <?php
                     if($row_detalle['found'] == 'found') echo 'Encontrado';

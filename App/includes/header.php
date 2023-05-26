@@ -43,7 +43,7 @@
     ?>
     <?php if (str_contains($actual_link, 'index')) { ?>
         <div>
-            <h2 class="gallery__titulo">Found it</h2>
+            <h2 class="gallery__titulo" style="color: gray;">Found it</h2>
         </div>
     <?php } else {?>
         <form class="search__form" method="POST">
