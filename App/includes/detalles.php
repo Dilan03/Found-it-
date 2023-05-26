@@ -25,18 +25,19 @@
     </div>
     <div class="rectangulo3">
         <section>
-            <?php if((!empty($_SESSION["id"]) && ($row_detalle["id_autor"] == $_SESSION["id"]))  || $row["id_rol"] == 1) { ?>
+            <?php if(!empty($_SESSION["id"])) {if((!empty($_SESSION["id"]) && ($row_detalle["id_autor"] == $_SESSION["id"]))  || $row["id_rol"] == 1) { ?>
                 <i id="options_desplegable_llave_btn"><img class="detalles_opt" src="assets/icons/llave.svg"></i>
                 <div class="options__desplegable-llave hideElement" id="options_desplegable_llave">
                     <a href="#" id="eliminar_post_btn">Eliminar</a>
                     <a href="#" id="editar_post_btn">Editar</a>
                     <a href="#" id="marcar_recuperado_btn">Recuperado</a>
                 </div>
-                <?php } else { ?>
-                        <?php } ?>
+            <?php } else { ?>
+                    
+            <?php }} ?>
                         
-                        <h2 class="titulo">
-                            <?php echo $row_detalle['nombre_objeto']?>
+            <h2 class="titulo">
+                <?php echo $row_detalle['nombre_objeto']?>
             </h2>
             <label for="encontrado" class="diaencontrado">
                 <?php
@@ -73,11 +74,17 @@
             <p class="tel"><?php echo $row_detalle['telefono']?></p>
 
             <div class="seccionBtn">
+                <?php if(!empty($_SESSION["id"])) {?>
                 <p class="pre">¿Es tuyo?</p>
                 <button class="rectangulo4" onclick="redirectToWhatsApp()">
                     <span>Enviar mensaje</span> 
                     <img src="assets/icons/wasap.svg" alt="" class="was">
                 </button>
+                <?php } else {?>
+                    <div class="button__login">
+                        <a href="index.php" type="submit" class="boton boton__tarjeta boton__tarjeta--login">Iniciar sesión</a>
+                    </div>
+                <?php }?>
                 <script>
         function redirectToWhatsApp() {
             var phoneNumber = "<?php echo $row_detalle['telefono']; ?>";

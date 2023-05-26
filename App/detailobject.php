@@ -33,7 +33,7 @@
                         <textarea name="comentario" cols="100" rows="10" placeholder="Añadir un comentario" class="comentario__caja" required></textarea>
     
                     </div>
-                    <button type="submit" name="comentar">Comentar</button>
+                    <button type="submit" name="comentar" class="comentar_btn">Comentar</button>
                 </form>
                 <?php } ?>
                 <?php include 'includes/comentario.php'?>
