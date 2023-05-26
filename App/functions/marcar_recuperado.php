@@ -6,18 +6,19 @@ $dbName = "found_it";
 
 $conn = mysqli_connect($serverName, $userName, $password, $dbName);
 
-if(isset($_GET['id'])) {
-    $id_post = $_GET['id'];
- }
 
 if(isset($_POST['recuperado'])){
-    $queryfound = "INSERT INTO etiquetas (nombre, id_post) values ('found', $id_post)";
-    mysqli_query($conn, $queryfound);
-    if($queryfound) {
-        echo 'insertado';
-    } else {
-        die(mysql_error());
+    if(isset($_GET['id'])) {
+        $id_post = $_GET['id'];
+     }
 
-    }
-    header("Location: ../index.php");
+    $queryfound = "UPDATE etiquetas SET nombre = 'lost' WHERE $id_post = 3";
+    mysqli_query($conn, $queryfound);
+    echo "<script> alert('Registro exitoso!!')</script>";
+}
+
+if($queryfound) {
+    echo 'insertado';
+} else {
+    die(mysql_error());
 }
