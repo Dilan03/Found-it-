@@ -1,4 +1,5 @@
-<?php    
+<?php
+/*   
 $date = date('Y-m-d');
 
 $hoy = new DateTime($date);
@@ -15,4 +16,4 @@ if($diferencia_dias->days > 8) {
          $queryetiquetas = "INSERT INTO etiquetas(nombre, id_post) values('ancient',$id_post)";
          mysqli_query($conn, $queryetiquetas);
    }
-}
+   */
