@@ -17,7 +17,7 @@ while($row_comenatrios = mysqli_fetch_array($resultado_comenatios)) {
                 if(!empty($_SESSION["id"])) {
                     if(($row['no_control'] == $row_comenatrios['no_control']) || ($row["id_rol"] == 1)) 
                     { 
-                        echo '<a  id="borrar_comentario" class="borrar_comentario_btn" href="functions/borrar_comentarios.php?id='.$row_comenatrios['id_post'].'&id_comentario='.$row_comenatrios['id'].'"><img class="detalles_opt" src="assets/icons/bote-basura.svg"></a>';
+                        echo '<a  class="borrar_comentario_btn" href="functions/borrar_comentarios.php?id='.$row_comenatrios['id_post'].'&id_comentario='.$row_comenatrios['id'].'"><img class="detalles_opt" src="assets/icons/bote-basura.svg"></a>';
                     } 
                 }
                 echo'</label><span style="color: gray; font-size: 14px;">  '.substr($row_comenatrios['fecha_publicacion'], 0,10).'</span><br>
