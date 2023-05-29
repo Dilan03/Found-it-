@@ -29,7 +29,3 @@
 <div class="modal hideElement" id="marcar_recuperado_form">
     <?php include 'includes/marcar_recuperado.php'?>
 </div>
-
-<div class="modal hideElement" id="borrar_comentario_form">
-    <?php include 'includes/borrar_comentario.php'?>
-</div>

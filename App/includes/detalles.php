@@ -32,12 +32,13 @@
                     <a href="#" id="editar_post_btn">Editar</a>
                     <a href="#" id="marcar_recuperado_btn">Recuperado</a>
                 </div>
-                <?php } else { ?>
-                <?php } }?>
+            <?php } else { ?>
+                    
+            <?php }} ?>
                         
-                <h2 class="titulo">
-                    <?php echo $row_detalle['nombre_objeto']?>
-                </h2>
+            <h2 class="titulo">
+                <?php echo $row_detalle['nombre_objeto']?>
+            </h2>
             <label for="encontrado" class="diaencontrado">
                 <?php
                     if($row_detalle['found'] == 'found') echo 'Encontrado';
@@ -70,14 +71,19 @@
             <br>
             <p class="alumno"><?php echo $row_detalle['nombre']?> <?php echo $row_detalle['apellido']?></p>
             <p class="carrera"><?php echo $row_detalle['carrera']?></p>
-            <p class="tel"><?php echo $row_detalle['telefono']?></p>
 
             <div class="seccionBtn">
-                <p class="pre">¿Es tuyo?</p>
+                <?php if(!empty($_SESSION["id"])) {?>
+                <p class="pre">¿Es tuyo o sábes dónde está?</p>
                 <button class="rectangulo4" onclick="redirectToWhatsApp()">
                     <span>Enviar mensaje</span> 
                     <img src="assets/icons/wasap.svg" alt="" class="was">
                 </button>
+                <?php } else {?>
+                    <div class="button__login">
+                        <a href="index.php" type="submit" class="boton boton__tarjeta boton__tarjeta--login">Iniciar sesión</a>
+                    </div>
+                <?php }?>
                 <script>
         function redirectToWhatsApp() {
             var phoneNumber = "<?php echo $row_detalle['telefono']; ?>";

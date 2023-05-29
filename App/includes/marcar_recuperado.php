@@ -1,14 +1,25 @@
 <form class="login-form eliminar_post movLR" method="POST">
     <h2 class="login-titulo">Objeto recuperado</h2>
     <div class="eliminar_botones">
-       <button type="submit" class="login-button" name="recuperado">Confirmar</button>
-       <button type="submit" class="login-button">Cancelar</button>
+       <button type="submit" class="login-button" name="recuperado">Confirmar
+        
+       </button>
+       <button class="login-button">Cancelar</button>
     </div>
 
     <button class="cerrar"><img src="assets/icons/equis.svg" id="cerrar_modal"></button>
 </form>
 
-<?php
-if(isset($_POST["recuperado"])) {
-    echo $row_detalle['id'];
-}
+<?php echo $row_detalle['id']; 
+    if(isset($_POST['recuperado'])){
+
+        if(isset($_GET['id'])) {
+            $id_post = $_GET['id'];
+         }
+    
+        $queryfound = "UPDATE etiquetas SET nombre = 'gathered' WHERE id_post = $id_post";
+        mysqli_query($conn, $queryfound);
+
+        echo "<meta http-equiv='refresh' content='0'>";
+    }
+?>

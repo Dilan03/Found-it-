@@ -58,7 +58,8 @@ if($filatrados > 0) {
     (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'gathered' AND etiquetas.id_post = p.id) as gathered
     FROM posts p
     INNER JOIN detallesposts detalles ON p.id_detallesPosts = detalles.id
-    INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id;
+    INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id
+    ORDER BY detalles.fecha_publicacion desc;
     ";
 }
 
