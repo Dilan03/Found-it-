@@ -17,8 +17,6 @@ const cerrar_sesion_form = document.getElementById('cerrar_sesion_form');
 const marcar_recuperado_btn = document.getElementById('marcar_recuperado_btn');
 const marcar_recuperado_form = document.getElementById('marcar_recuperado_form');
 
-const borrar_comentario_form = document.getElementById('borrar_comentario_form');
-
 const body = document.body
 
 if (registro_btn) {
@@ -87,9 +85,7 @@ window.addEventListener('click', (e) => {
       toggleModal(cerrar_sesion_form);
    } else if (e.target.id == 'marcar_recuperado_form') {
       toggleModal(marcar_recuperado_form);
-   } else if (e.target.id == 'borrar_comentario_form') {
-      toggleModal(borrar_comentario_form);
-   }
+   } 
 
    if (e.target.parentElement.id != 'options_desplegable' && options_btn.classList.contains('active') && e.target.parentElement.id != 'options_btn') {
       options_desplegable.classList.toggle('hideElement');
