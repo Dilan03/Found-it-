@@ -1,3 +1,8 @@
+.tarjeta__etiquetasCAT {
+    display: flex;
+    flex-direction: column;
+}
+
 .comentar_btn {
     position: relative;
     background-color: var(--morado-3);
@@ -267,7 +272,8 @@ a {
     padding: 5px 10px;
     border-radius: 8px;
     font-family: RobotoMono-Regular;
-    font-size: 16px;
+    font-size: 15px;
+    margin: 1px;
 }
 
 .etiquetaEST {
@@ -1461,6 +1467,10 @@ input[type="checkbox"]:checked {
 
 .fotocargada {
     background-color: var(--morado-8);
+}
+
+.ubi {
+    background-color: var(--morado-6);
 }
 
 /*HideElement*/

@@ -26,7 +26,10 @@
        <div class="tarjeta__detalles">
            <h4 class="tarjeta__nombre">'.($row_posts['nombre_objeto']).'</h4>
            <span>
-               <p class="etiquetaCAT">'.($row_posts['nombre']).'</p>
+                <span class="tarjeta__etiquetasCAT">
+                    <p class="etiquetaCAT">'.($row_posts['nombre']).'</p>
+                    <p class="etiquetaCAT ubi">'.($row_posts['ubi']).'</p>
+                </span>
                <button class="boton boton__tarjeta"><a href="detailobject.php?id='.$row_posts['id'].'">Informacion</a></button>
            </span>
            <span class="tarjeta__fecha">'.$estado.': '.(substr($row_posts['fecha_publicacion'], 0,10)).'</span>
