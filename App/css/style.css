@@ -591,6 +591,7 @@ footer {
     background: var(--morado-5);
     border-radius: 8px;
     overflow: hidden;
+    cursor:auto;
 }
 
 .profilepic img {
