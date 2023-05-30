@@ -62,7 +62,7 @@ if (isset($_POST["filtrar"])) {
         $consulta_filtrada .= $condiciones[0];
     }
 
-    $consulta_filtrada .= ";";
+    $consulta_filtrada .= "ORDER BY detalles.fecha_publicacion;";
 }
 
 if($filatrados > 0) {
