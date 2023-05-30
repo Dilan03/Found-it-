@@ -20,14 +20,28 @@
         <option value="" disabled selected>Categoría</option>
         <option value="Electronicos">Electronicos</option>
         <option value="Ropa">Ropa</option>
-        <option value="opcion3">Opción 3</option>
+        <option value="Otros">Otros</option>
     </select>
     <select class="ubicacion" name="ubicacion" required>
         <option value="" disabled selected>Ubicación</option>
-        <option value="F">F</option>
-        <option value="D">D</option>
-        <option value="opcion3">Opción 3</option>
-        </select><br>
+        <option value="Ed. F">Ed. F</option>
+        <option value="Ed. G">Ed. G</option>
+        <option value="Ed. D">Ed. D</option>
+        <option value="Ed. P">Ed. P</option>
+        <option value="Ed. E">Ed. E</option>
+        <option value="Ed. B">Ed. B</option>
+        <option value="Ed. C">Ed. C</option>
+        <option value="Ed. M">Ed. M</option>
+        <option value="Ed. T">Ed. T</option>
+        <option value="Ed. R">Ed.   R</option>
+        <option value="Biblioteca">Biblioteca</option>
+        <option value="Gimnasio">Gimnasio</option>
+        <option value="Lab. Métodos">Lab. Métodos</option>
+        <option value="Lab. Computo">Lab. Computo</option>
+        <option value="Cafeteria">Cafeteria</option>
+        <option value="Explanada">Explanada</option>
+        <option value="Ed. Admin">Ed. Admin</option>
+    </select><br>
 
     <button type="submit" class="publicar" name="publicar">Publicar</button>
     <button class="cerrar"><img src="assets/icons/equis.svg" id="cerrar_modal"></button>

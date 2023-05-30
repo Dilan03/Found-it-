@@ -29,7 +29,7 @@
                 <i id="options_desplegable_llave_btn"><img class="detalles_opt" src="assets/icons/llave.svg"></i>
                 <div class="options__desplegable-llave hideElement" id="options_desplegable_llave">
                     <a href="#" id="eliminar_post_btn">Eliminar</a>
-                    <a href="#" id="editar_post_btn">Editar</a>
+                    <button id="editar_post_btn">Editar</button>
                     <a href="#" id="marcar_recuperado_btn">Recuperado</a>
                 </div>
             <?php } else { ?>
@@ -60,7 +60,7 @@
                 ?>
                 en</label>
             <div class="rectangulo5">
-                <label for="ubi" class="edificio">Ed. <?php echo $row_detalle['ubicacion']?></label>
+                <label for="ubi" class="edificio"><?php echo $row_detalle['ubicacion']?></label>
             </div>
             <label for="encontro" class="encontro">Lo
                 <?php
@@ -71,11 +71,10 @@
             <br>
             <p class="alumno"><?php echo $row_detalle['nombre']?> <?php echo $row_detalle['apellido']?></p>
             <p class="carrera"><?php echo $row_detalle['carrera']?></p>
-            <p class="tel"><?php echo $row_detalle['telefono']?></p>
 
             <div class="seccionBtn">
                 <?php if(!empty($_SESSION["id"])) {?>
-                <p class="pre">¿Es tuyo?</p>
+                <p class="pre">¿Es tuyo o sábes dónde está?</p>
                 <button class="rectangulo4" onclick="redirectToWhatsApp()">
                     <span>Enviar mensaje</span> 
                     <img src="assets/icons/wasap.svg" alt="" class="was">

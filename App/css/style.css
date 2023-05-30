@@ -1,3 +1,8 @@
+.tarjeta__etiquetasCAT {
+    display: flex;
+    flex-direction: column;
+}
+
 .comentar_btn {
     position: relative;
     background-color: var(--morado-3);
@@ -79,7 +84,8 @@
 }
 
 .options__desplegable a:not(:last-child),
-.options__desplegable-llave a:not(:last-child) {
+.options__desplegable-llave a:not(:last-child),
+.options__desplegable-llave button:not(:last-child) {
     border-bottom: 2px solid var(--morado-6);
 }
 
@@ -96,7 +102,8 @@
 }
 
 .options__desplegable a,
-.options__desplegable-llave a {
+.options__desplegable-llave a,
+.options__desplegable-llave button {
     cursor: pointer;
     padding: 10px 0;
     z-index: 1000;
@@ -267,7 +274,8 @@ a {
     padding: 5px 10px;
     border-radius: 8px;
     font-family: RobotoMono-Regular;
-    font-size: 16px;
+    font-size: 15px;
+    margin: 1px;
 }
 
 .etiquetaEST {
@@ -591,6 +599,7 @@ footer {
     background: var(--morado-5);
     border-radius: 8px;
     overflow: hidden;
+    cursor: auto;
 }
 
 .profilepic img {
@@ -831,7 +840,7 @@ button.login-button:hover {
 .rectangulo1 {
     position: relative;
     width: calc(70% - 80px);
-    height: calc(777px - 80px);
+    height: calc(735px - 80px);
     background: #181B35;
     border-radius: 8px;
     margin-right: 20px;
@@ -852,9 +861,8 @@ button.login-button:hover {
     color: white;
     width: 100px;
     left: 50px;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 41px;
+    font-size: 22px;
+    line-height: 40px;
     margin-top: 0;
 }
 
@@ -869,9 +877,8 @@ button.login-button:hover {
 
 .diaencontrado {
     display: block;
-
     width: 100%;
-    height: 55px;
+    height: 25px;
     left: 50px;
     top: 115px;
     color: rgba(255, 255, 255, 0.6);
@@ -1434,7 +1441,6 @@ input[type="checkbox"]:checked {
     padding-left: 20px;
 }
 
-
 .comentar {
     display: flex;
     align-self: center;
@@ -1464,6 +1470,10 @@ input[type="checkbox"]:checked {
 
 .fotocargada {
     background-color: var(--morado-8);
+}
+
+.ubi {
+    background-color: var(--morado-6);
 }
 
 /*HideElement*/

@@ -17,8 +17,6 @@ const cerrar_sesion_form = document.getElementById('cerrar_sesion_form');
 const marcar_recuperado_btn = document.getElementById('marcar_recuperado_btn');
 const marcar_recuperado_form = document.getElementById('marcar_recuperado_form');
 
-const borrar_comentario_form = document.getElementById('borrar_comentario_form');
-
 const body = document.body
 
 if (registro_btn) {
@@ -61,7 +59,9 @@ if (marcar_recuperado_btn) {
 }
 
 const myFile = document.getElementById('myFile');
+const myFile2 = document.getElementById('myFile2');
 const myFileArea = document.getElementById('myFileArea');
+const myFileArea2 = document.getElementById('myFileArea2');
 
 if (myFile) {
    myFile.addEventListener('change', () => {
@@ -69,6 +69,11 @@ if (myFile) {
    });
 }
 
+if (myFile2) {
+   myFile2.addEventListener('change', () => {
+      myFileArea2.classList.add('fotocargada');
+   });
+}
 window.addEventListener('click', (e) => {
    if (e.target.id == 'crear_post_form') {
       myFileArea.classList.remove('fotocargada');
@@ -87,8 +92,6 @@ window.addEventListener('click', (e) => {
       toggleModal(cerrar_sesion_form);
    } else if (e.target.id == 'marcar_recuperado_form') {
       toggleModal(marcar_recuperado_form);
-   } else if (e.target.id == 'borrar_comentario_form') {
-      toggleModal(borrar_comentario_form);
    }
 
    if (e.target.parentElement.id != 'options_desplegable' && options_btn.classList.contains('active') && e.target.parentElement.id != 'options_btn') {

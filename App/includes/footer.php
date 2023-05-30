@@ -2,8 +2,8 @@
         <div class="footer__contenido">
             <i class="logo__footer"><a href="index.php"><img src="assets/icons/logofooter.svg" alt="logo"></a></i>
             <span>
-                <a href="#">LINK-1</a>
-                <a href="#">LINK-2</a>
+                <p><a>¿Te interesa ver el código de la apicación? ¡Haz click en el enlace de abajo!</a></p>
+                <a href="https://github.com/Dilan03/Found-it-">Repositorio de github</a>
             </span>
             <span></span>
         </div>

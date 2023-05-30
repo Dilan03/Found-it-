@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <?php include_once 'includes/scripts-js.php'?>
-    <title>Document</title>
+    <title>Found it</title>
 </head>
 <body>
     <div class="container">        
@@ -43,7 +43,7 @@
     ?>
     <?php if (str_contains($actual_link, 'index')) { ?>
         <div>
-            <h2 class="gallery__titulo">Found it</h2>
+            <h2 class="gallery__titulo" style="color: gray;">Found it</h2>
         </div>
     <?php } else {?>
         <form class="search__form" method="POST">
