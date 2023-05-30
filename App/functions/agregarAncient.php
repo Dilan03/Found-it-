@@ -1,4 +1,5 @@
-<?php    
+<?php
+
 $date = date('Y-m-d');
 
 $hoy = new DateTime($date);
