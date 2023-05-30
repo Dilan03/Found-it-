@@ -52,8 +52,8 @@ if (isset($_POST['register'])) {
     
     <div class="form-group">
         <select id="major" name="major" type ="major">
-            <option style="font-family:'Arial'" value="ISC">ISC</option>
-            <option style="font-family:'Arial'" value="INF">INF</option>
+            <option style="font-family:'Arial'" value="ISC">Sistemas Computacionales</option>
+            <option style="font-family:'Arial'" value="INF">Informatica</option>
             <option style="font-family:'Arial'" value="ARQ">Arquitectura</option>
             <option style="font-family:'Arial'" value="IND">Industrial</option>
             <option style="font-family:'Arial'" value="IDIND">Diseño Industrial</option>
