@@ -84,7 +84,8 @@
 }
 
 .options__desplegable a:not(:last-child),
-.options__desplegable-llave a:not(:last-child) {
+.options__desplegable-llave a:not(:last-child),
+.options__desplegable-llave button:not(:last-child) {
     border-bottom: 2px solid var(--morado-6);
 }
 
@@ -101,7 +102,8 @@
 }
 
 .options__desplegable a,
-.options__desplegable-llave a {
+.options__desplegable-llave a,
+.options__desplegable-llave button {
     cursor: pointer;
     padding: 10px 0;
     z-index: 1000;
@@ -597,7 +599,7 @@ footer {
     background: var(--morado-5);
     border-radius: 8px;
     overflow: hidden;
-    cursor:auto;
+    cursor: auto;
 }
 
 .profilepic img {
