@@ -16,6 +16,6 @@ if($diferencia_dias->days > 8) {
       mysqli_query($conn, $queryetiquetas);
    }
 }else {
-      $queryetiquetasD = "DELETE FROM etiquetas WHERE id_post = $id_post and nombre = 'ancient'";
-      mysqli_query($conn, $queryetiquetasD);
+   $queryetiquetasD = "DELETE FROM etiquetas WHERE id_post = $id_post and nombre = 'ancient'";
+   mysqli_query($conn, $queryetiquetasD);
 }
