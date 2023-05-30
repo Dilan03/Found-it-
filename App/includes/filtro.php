@@ -58,12 +58,12 @@
         <input type="checkbox" name="Gimnasio" value="Gimnasio" class="check_P">
         <label for="Gimnasio">Gimnasio</label>
         <br>
-        <input type="checkbox" name="Lab. Métodos" value="Lab. Métodos" class="check_M">
+        <input type="checkbox" name="LabMétodos" value="Lab. Métodos" class="check_M">
         <label for="Lab. Métodos">Lab. Métodos</label>
     </div>
     <div class="Ubicación_5">
         <br><br><br><br>
-        <input type="checkbox" name="Lab. Computo" value="Lab. Computo" class="check_X">
+        <input type="checkbox" name="LabComputo" value="Lab. Computo" class="check_X">
         <label for="Lab. Computo">Lab. Computo</label>
         <br>
         <input type="checkbox" name="Cafeteria" value="Cafeteria" class="check_Z">
@@ -74,7 +74,7 @@
     </div>
     <div class="Ubicación_6">
         <br><br><br><br>
-        <input type="checkbox" name="Ed. Admin" value="Ed. Admin" class="check_Q">
+        <input type="checkbox" name="EdAdmin" value="Ed. Admin" class="check_Q">
         <label for="Ed. Admin">Ed. Admin</label>    
         <br>
         <input type="checkbox" name="Biblioteca" value="Biblioteca" class="check_Q">

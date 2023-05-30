@@ -1,7 +1,9 @@
 <?php
     $estado;
+
     if($row_posts['found'] == 'found') $estado = 'Encontrado';
     elseif ($row_posts['lost'] == 'lost') $estado = 'Perdido';
+    elseif ($row_posts['gathered'] == 'gathered') $estado = 'Recuperado';
 
     require 'functions/agregarAncient.php';
 
