@@ -1,66 +1,48 @@
-<?php
-$serverName = "127.0.0.1:33065";
-$userName = "found_it";
-$password = "123";
-$dbName = "found_it";
-
-$conn = mysqli_connect($serverName, $userName, $password, $dbName);
-
-if (isset($_POST["confirmar"])) {
-    $nombre_objeto = $_POST["nombre_objeto"];
-    $fecha = $_POST["fecha"];
-    $estatus = $_POST["estatus"];
-    $descripcion = $_POST["descripcion"];
-    $categoria = $_POST["categoria"];
-    $ubicacion = $_POST["ubicacion"];
- 
-    $imagen = $_FILES['imagen']['tmp_name'];
-    $imagen_name = $_FILES['imagen']['name'];
-    $imagen = base64_encode(file_get_contents(addslashes($imagen)));
-    
-    $querydetalles = "UPDATE detallesposts SET nombre_objeto = '$nombre_objeto', descripcion = '$descripcion', fecha_publicacion = '$fecha'";
-mysqli_query($conn, $querydetalles);
- 
-    $querypost = "UPDATE posts SET imagen = '$imagen'";
-    mysqli_query($conn, $querypost);
-
-}
-
-?>
-
-<form class="crearpub__form movLR">
+<form class="crearpub__form movLR" method="POST" action=<?php echo "functions/editar_posts.php?id_user=".$row['no_control']."&id_post=".$row_detalle['id']?> enctype="multipart/form-data">
     <h2 class="titulo-ventana"><b>Editar publicación</b></h2>
 
-    <input type="file" id="myFile" name="filename">
-    <label for="myFile" ><div class="fileimage"></div></label>
+    <input type="file" id="myFile2" name="imagen">
+    <label for="myFile2" ><div class="fileimage" id="myFileArea2"></div></label>
 
-    <input type="file" id="imagen" name="imagen"><br>
+    <input type="textarea" class="tituloO" name="nombre_objeto" placeholder="Nombre del objeto" required>
 
-    <input type="textarea" class="tituloO" name="titulo" placeholder="Título">
+    <input type="date" class="fecha" name="fecha" required><br>
 
-    <input type="date" class="fecha" name="fecha"><br>
-
-    <input type="radio" class="perdido" id="perdido" name="p/e">
+    <input type="radio" class="perdido" id="perdido" name="estatus" value="lost"required>
     <label class="labperdido">Perdido</label>
 
-    <input type="radio" class="encontrado" id="encontrado" name="p/e">
+    <input type="radio" class="encontrado" id="encontrado" name="estatus" value="found"required>
     <label class="labencontrado">Encontrado</label><br>
 
-    <input type="textarea" class="descripcion" name="descripcion" placeholder="Descripción"><br>
+    <textarea class="descripcion" name="descripcion" placeholder="Descripción" required></textarea><br>
 
-    <select class="categoria" name="Categoría">
-        <option value="" disabled selected>Cateoría</option>
-        <option value="opcion1">Opción 1</option>
-        <option value="opcion2">Opción 2</option>
-        <option value="opcion3">Opción 3</option>
+    <select class="categoria" name="categoria" required>
+        <option value="" disabled selected>Categoría</option>
+        <option value="Electronicos">Electronicos</option>
+        <option value="Ropa">Ropa</option>
+        <option value="Otros">Otros</option>
     </select>
-    <select class="ubicacion" name="Ubicación">
+    <select class="ubicacion" name="ubicacion" required>
         <option value="" disabled selected>Ubicación</option>
-        <option value="opcion1">Opción 1</option>
-        <option value="opcion2">Opción 2</option>
-        <option value="opcion3">Opción 3</option>
-        </select><br>
+        <option value="Ed. F">Ed. F</option>
+        <option value="Ed. G">Ed. G</option>
+        <option value="Ed. D">Ed. D</option>
+        <option value="Ed. P">Ed. P</option>
+        <option value="Ed. E">Ed. E</option>
+        <option value="Ed. B">Ed. B</option>
+        <option value="Ed. C">Ed. C</option>
+        <option value="Ed. M">Ed. M</option>
+        <option value="Ed. T">Ed. T</option>
+        <option value="Ed. R">Ed.   R</option>
+        <option value="Biblioteca">Biblioteca</option>
+        <option value="Gimnasio">Gimnasio</option>
+        <option value="Lab. Métodos">Lab. Métodos</option>
+        <option value="Lab. Computo">Lab. Computo</option>
+        <option value="Cafeteria">Cafeteria</option>
+        <option value="Explanada">Explanada</option>
+        <option value="Ed. Admin">Ed. Admin</option>
+    </select><br>
 
-    <button class="publicar">Confirmar</button>
+    <button type="submit" class="publicar" name="actualizarPost">Publicar</button>
     <button class="cerrar"><img src="assets/icons/equis.svg" id="cerrar_modal"></button>
 </form>
