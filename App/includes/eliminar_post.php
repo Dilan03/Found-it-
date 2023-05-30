@@ -16,7 +16,7 @@ $conn = mysqli_connect($serverName, $userName, $password, $dbName);
      }
 
     // Eliminar la publicación de la tabla "posts"
-    $queryEliminarPost = "DELETE FROM posts WHERE id = $id_post";
+    $queryEliminarPost = "DELETE FROM posts WHERE id_Detallesposts = $id_post";
     mysqli_query($conn, $queryEliminarPost);
 
     // Eliminar los detalles de la publicación de la tabla "detallesposts"
@@ -24,7 +24,7 @@ $conn = mysqli_connect($serverName, $userName, $password, $dbName);
     mysqli_query($conn, $queryEliminarDetalles);
 
     // Eliminar las etiquetas de la publicación de la tabla "etiquetas"
-    $queryEliminarEtiquetas = "DELETE FROM  etiquetas WHERE id_post = $id_post";
+    $queryEliminarEtiquetas = "DELETE FROM etiquetas WHERE id_post = $id_post";
     mysqli_query($conn, $queryEliminarEtiquetas);
 
     // Redirigir al usuario a la página correspondiente según el estatus de la publicación
