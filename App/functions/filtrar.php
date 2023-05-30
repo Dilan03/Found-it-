@@ -3,14 +3,15 @@ $filatrados = 0;
 if (isset($_POST["filtrar"])) {
 
     $consulta_filtrada = "
-    SELECT p.id, p.imagen, detalles.nombre_objeto, detalles.fecha_publicacion, clas.nombre,
+    SELECT p.id, p.imagen, detalles.nombre_objeto, detalles.fecha_publicacion, clas.nombre, u.nombre as ubi,
     (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'ancient' AND etiquetas.id_post = p.id) as ancient,
     (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'lost' AND etiquetas.id_post = p.id) as lost,
     (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'found' AND etiquetas.id_post = p.id) as found,
     (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'gathered' AND etiquetas.id_post = p.id) as gathered
     FROM posts p
     INNER JOIN detallesposts detalles ON p.id_detallesPosts = detalles.id
-    INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id WHERE
+    INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id
+    INNER JOIN ubicacion u ON detalles.id_ubicacion = u.id WHERE
     ";
 
     $filatrados = 0;
@@ -18,15 +19,33 @@ if (isset($_POST["filtrar"])) {
 
     if(isset($_POST["Ropa"])) {
         $filatrados++;
-        $op1 = " clas.nombre = '".$_POST["Ropa"]."' ";
-        array_push($condiciones, $op1);
+        $Ropa = " clas.nombre = '".$_POST["Ropa"]."' ";
+        array_push($condiciones, $Ropa);
 
     }
 
     if(isset($_POST["Electronicos"])) {
         $filatrados++;
-        $op2 = " clas.nombre = '".$_POST["Electronicos"]."' ";
-        array_push($condiciones, $op2);
+        $Electronicos = " clas.nombre = '".$_POST["Electronicos"]."' ";
+        array_push($condiciones, $Electronicos);
+    } 
+
+    if(isset($_POST["Otros"])) {
+        $filatrados++;
+        $Otros = " clas.nombre = '".$_POST["Otros"]."' ";
+        array_push($condiciones, $Otros);
+    }
+
+    if(isset($_POST["F"])) {
+        $filatrados++;
+        $EdF = " u.nombre = '".$_POST["F"]."' ";
+        array_push($condiciones, $EdF);
+    } 
+
+    if(isset($_POST["G"])) {
+        $filatrados++;
+        $EdG = " u.nombre = '".$_POST["G"]."' ";
+        array_push($condiciones, $EdG);
     } 
 
     $condicionesLenght = sizeof($condiciones);
@@ -51,7 +70,7 @@ if($filatrados > 0) {
 
 } else {
     $consulta_posts = "
-    SELECT p.id, p.imagen, detalles.nombre_objeto, detalles.fecha_publicacion, clas.nombre,
+    SELECT p.id, p.imagen, detalles.nombre_objeto, detalles.fecha_publicacion, clas.nombre, u.nombre as ubi,
     (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'ancient' AND etiquetas.id_post = p.id) as ancient,
     (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'lost' AND etiquetas.id_post = p.id) as lost,
     (SELECT nombre FROM etiquetas WHERE etiquetas.nombre = 'found' AND etiquetas.id_post = p.id) as found,
@@ -59,6 +78,7 @@ if($filatrados > 0) {
     FROM posts p
     INNER JOIN detallesposts detalles ON p.id_detallesPosts = detalles.id
     INNER JOIN clasificacion clas ON detalles.id_clasificacion = clas.id
+    INNER JOIN ubicacion u ON detalles.id_ubicacion = u.id
     ORDER BY detalles.fecha_publicacion desc;
     ";
 }

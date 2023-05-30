@@ -1,8 +1,23 @@
+<?php
+if (isset($_POST['register'])) {
+    // Sanitización de datos
+    $no_control = isset($_POST['no_control']) ? htmlspecialchars($_POST['no_control']) : '';
+    $first_name = isset($_POST['first_name']) ? htmlspecialchars($_POST['first_name']) : '';
+    $last_name = isset($_POST['last_name']) ? htmlspecialchars($_POST['last_name']) : '';
+    $email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
+    $major = isset($_POST['major']) ? htmlspecialchars($_POST['major']) : '';
+    $phone = isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : '';
+    
+    $stmt = $conn->prepare('INSERT INTO usuarios (no_control, first_name, last_name, email, major, phone) VALUES (?, ?, ?, ?, ?, ?)');
+    $stmt->execute([$no_control, $first_name, $last_name, $email, $major, $phone]);
+}
+?>
+
 <form class="registration-form movLR" method="POST" enctype="multipart/form-data">
     <h2 class="register-titulo">Registrate</h2>
     
     <div class="form-group">
-        <input type="text" id="no_control" name="no_control" placeholder="Número de control" required>
+        <input type="text" id="no_control" name="no_control" placeholder="Número de control (solo los números)" required>
     </div>
 
     <div class="form-group">

@@ -17,7 +17,7 @@
             $id_post = $_GET['id'];
          }
     
-        $queryfound = "UPDATE etiquetas SET nombre = 'gathered' WHERE id_post = $id_post";
+        $queryfound = "UPDATE etiquetas SET nombre = 'gathered' WHERE id_post = $id_post AND (nombre = 'lost' OR nombre = 'found')";
         mysqli_query($conn, $queryfound);
 
         echo "<meta http-equiv='refresh' content='0'>";

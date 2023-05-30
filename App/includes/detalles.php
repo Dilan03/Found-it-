@@ -71,11 +71,10 @@
             <br>
             <p class="alumno"><?php echo $row_detalle['nombre']?> <?php echo $row_detalle['apellido']?></p>
             <p class="carrera"><?php echo $row_detalle['carrera']?></p>
-            <p class="tel"><?php echo $row_detalle['telefono']?></p>
 
             <div class="seccionBtn">
                 <?php if(!empty($_SESSION["id"])) {?>
-                <p class="pre">¿Es tuyo?</p>
+                <p class="pre">¿Es tuyo o sábes dónde está?</p>
                 <button class="rectangulo4" onclick="redirectToWhatsApp()">
                     <span>Enviar mensaje</span> 
                     <img src="assets/icons/wasap.svg" alt="" class="was">

@@ -1,33 +1,3 @@
-<?php
-$serverName = "127.0.0.1:33065";
-$userName = "found_it";
-$password = "123";
-$dbName = "found_it";
-
-$conn = mysqli_connect($serverName, $userName, $password, $dbName);
-
-if (isset($_POST["confirmar"])) {
-    $nombre_objeto = $_POST["nombre_objeto"];
-    $fecha = $_POST["fecha"];
-    $estatus = $_POST["estatus"];
-    $descripcion = $_POST["descripcion"];
-    $categoria = $_POST["categoria"];
-    $ubicacion = $_POST["ubicacion"];
- 
-    $imagen = $_FILES['imagen']['tmp_name'];
-    $imagen_name = $_FILES['imagen']['name'];
-    $imagen = base64_encode(file_get_contents(addslashes($imagen)));
-    
-    $querydetalles = "UPDATE detallesposts SET nombre_objeto = '$nombre_objeto', descripcion = '$descripcion', fecha_publicacion = '$fecha'";
-mysqli_query($conn, $querydetalles);
- 
-    $querypost = "UPDATE posts SET imagen = '$imagen'";
-    mysqli_query($conn, $querypost);
-
-}
-
-?>
-
 <form class="crearpub__form movLR">
     <h2 class="titulo-ventana"><b>Editar publicación</b></h2>
 
