@@ -14,44 +14,45 @@ if (!empty($_SESSION["id"])) {
 }
 
 // Llamar al procedimiento almacenado para contar los posts
-$sql = "CALL contar_posts(@cant_posts)";
-$result = mysqli_query($conn, $sql);
+$sqlP = "CALL contar_posts(@cant_posts)";
+$resultP = mysqli_query($conn, $sqlP);
 
 // Recuperar el valor del parámetro OUT
-$sql = "SELECT @cant_posts AS cant_posts";
-$result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_assoc($result);
-$cantidadPosts = $row['cant_posts'];
+$sqlP = "SELECT @cant_posts AS cant_posts";
+$resultP = mysqli_query($conn, $sqlP);
+$rowP = mysqli_fetch_assoc($resultP);
+$cantidadPosts = $rowP['cant_posts'];
 
 // Llamar al procedimiento almacenado para contar los objetos encontrados
-$sql = "CALL contar_objetos_encontrados(@cant_encontrados)";
-$result = mysqli_query($conn, $sql);
+$sqlP = "CALL contar_objetos_encontrados(@cant_encontrados)";
+$resultP = mysqli_query($conn, $sqlP);
 
 // Recuperar el valor del parámetro OUT
-$sql = "SELECT @cant_encontrados AS cant_encontrados";
-$result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_assoc($result);
-$cantidadEncontrados = $row['cant_encontrados'];
+$sqlP = "SELECT @cant_encontrados AS cant_encontrados";
+$resultP = mysqli_query($conn, $sqlP);
+$rowP = mysqli_fetch_assoc($resultP);
+$cantidadEncontrados = $rowP['cant_encontrados'];
 
 // Llamar al procedimiento almacenado para contar los objetos perdidos
-$sql = "CALL contar_objetos_perdidos(@cant_perdidos)";
-$result = mysqli_query($conn, $sql);
+$sqlP = "CALL contar_objetos_perdidos(@cant_perdidos)";
+$resultP = mysqli_query($conn, $sqlP);
 
 // Recuperar el valor del parámetro OUT
-$sql = "SELECT @cant_perdidos AS cant_perdidos";
-$result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_assoc($result);
-$cantidadPerdidos = $row['cant_perdidos'];
+$sqlP = "SELECT @cant_perdidos AS cant_perdidos";
+$resultP = mysqli_query($conn, $sqlP);
+$rowP = mysqli_fetch_assoc($resultP);
+$cantidadPerdidos = $rowP['cant_perdidos'];
 
 // Llamar al procedimiento almacenado para contar los objetos recuperados
-$sql = "CALL contar_objetos_recuperados(@cant_recuperados)";
-$result = mysqli_query($conn, $sql);
+$sqlP = "CALL contar_objetos_recuperados(@cant_recuperados)";
+$resultP = mysqli_query($conn, $sqlP);
 
 // Recuperar el valor del parámetro OUT
-$sql = "SELECT @cant_recuperados AS cant_recuperados";
-$result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_assoc($result);
-$cantidadRecuperados = $row['cant_recuperados'];
+$sqlP = "SELECT @cant_recuperados AS cant_recuperados";
+$resultP = mysqli_query($conn, $sqlP);
+$rowP = mysqli_fetch_assoc($resultP);
+$cantidadRecuperados = $rowP['cant_recuperados'];
+echo $cantidadEncontrados;
 
 // Guardar las cantidades en el almacenamiento local del navegador
 echo "<script>
