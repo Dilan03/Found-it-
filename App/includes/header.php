@@ -61,6 +61,8 @@
                             <a href="userposts.php">Mis publicaciones</a>
                             <a href="#" id="editar_registro_btn">Editar información</a>
                             <a href="#" id="cerrar_sesion_btn" >Cerrar sesión</a>
+                            <a href="estadisticas.php">Estadisticas</a>
+                            
                         </div>
                         <i>
                             <img class="options__user hideElement" src="assets/icons/user-box.svg" >
