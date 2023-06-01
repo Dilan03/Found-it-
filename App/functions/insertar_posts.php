@@ -12,11 +12,16 @@ if(isset($_POST["publicar"])) {
       $id_autor = $_GET['id_user'];
    }
 
-   $queryID = "SELECT id FROM posts ORDER BY id DESC LIMIT 1";
-   $resultadoConsulta = mysqli_query($conn, $queryID);
-   $datoID = mysqli_fetch_assoc($resultadoConsulta);
+   $sqlFun = "SELECT calcular_Id(@p0) AS nueva_id";
+   $resultFun = mysqli_query($conn, $sqlFun);
+   $rowFun = mysqli_fetch_assoc($resultFun);
+   $id_calculada = (int)$rowFun['nueva_id'];
 
-   $id_post = $datoID['id'] +1;
+   // $queryID = "SELECT id FROM posts ORDER BY id DESC LIMIT 1";
+   // $resultadoConsulta = mysqli_query($conn, $queryID);
+   // $datoID = mysqli_fetch_assoc($resultadoConsulta);
+
+   $id_post = $id_calculada;
 
    $nombre_objeto = $_POST["nombre_objeto"];
    $fecha = $_POST["fecha"];
@@ -43,4 +48,4 @@ if($estatus == 'lost') {
    header("Location: ../lostobjects.php");
 } elseif ($estatus == 'found') {
    header("Location: ../foundobjects.php");
-}
+}  
